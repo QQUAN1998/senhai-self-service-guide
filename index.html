@@ -1,0 +1,2431 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="森海计划酒店新零售自助机合作服务指南：设备、选品、系统与运营支持，按点位测算合作收益。">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <title>森海自助机合作服务指南</title>
+  <style>
+    :root {
+      --ink: #103d39;
+      --ink-soft: #315b56;
+      --paper: #f7f6f1;
+      --paper-deep: #eaf0ec;
+      --white: #fdfcf8;
+      --gold: #c69a5b;
+      --gold-deep: #9c6b3e;
+      --teal: #278f86;
+      --teal-pale: #dcefeb;
+      --coral: #d45f42;
+      --muted: #61706c;
+      --line: rgba(23, 60, 58, 0.16);
+      --serif: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif;
+      --sans: "Noto Sans SC", "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.no-scroll { overflow: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--gold-deep);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    .section {
+      padding: 92px 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 86px;
+    }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 42px;
+    }
+    .section-heading h2 {
+      max-width: 680px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 46px;
+      font-weight: 600;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+    .section-heading p {
+      max-width: 340px;
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .section-heading > div:only-child { width: 100%; }
+    .section-heading > div:only-child h2 { max-width: none; text-wrap: balance; }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      background: rgba(246, 240, 230, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+    .brand-logo { display: block; width: 184px; height: auto; }
+    .brand-mark {
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      color: var(--paper);
+      background: var(--ink);
+      border-radius: 50%;
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-style: italic;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .nav-links a { position: relative; padding: 8px 0; }
+    .nav-links a::after {
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      left: 0;
+      height: 2px;
+      background: var(--teal);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 180ms ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+    .nav-cta {
+      padding: 8px 0;
+      color: #d65f3f;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .nav-cta:hover, .nav-cta:focus-visible { color: #b9472e; }
+    .nav-cta::after { background: #d65f3f; }
+    .mobile-toggle { display: none; }
+
+    .hero {
+      overflow: hidden;
+      color: var(--paper);
+      background: var(--ink);
+    }
+    .hero-layout {
+      display: flex;
+      align-items: center;
+      min-height: 0;
+      padding: 82px 0 86px;
+    }
+    .hero-copy { max-width: 900px; }
+    .hero .eyebrow { color: #9eddd5; }
+    .hero h1 {
+      max-width: 600px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 62px;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    .hero h1 em {
+      display: block;
+      color: #e7c28d;
+      font-style: normal;
+    }
+    .hero-lead {
+      max-width: 520px;
+      margin: 28px 0 0;
+      color: rgba(246, 240, 230, 0.78);
+      font-size: 17px;
+    }
+    .hero-contact {
+      display: grid;
+      grid-template-columns: 180px 230px minmax(0, 1fr);
+      margin-top: 30px;
+      border-top: 1px solid rgba(246, 240, 230, 0.26);
+      border-bottom: 1px solid rgba(246, 240, 230, 0.26);
+    }
+    .hero-contact-item { min-width: 0; padding: 14px 18px 15px 0; }
+    .hero-contact-item + .hero-contact-item { padding-left: 18px; border-left: 1px solid rgba(246, 240, 230, 0.2); }
+    .hero-contact-label { display: block; color: #9eddd5; font-size: 12px; font-weight: 800; letter-spacing: 0; }
+    .hero-contact a, .hero-contact address { display: block; margin-top: 6px; color: var(--paper); font-size: 14px; font-style: normal; font-weight: 600; line-height: 1.45; }
+    .hero-contact a { text-decoration: underline; text-underline-offset: 3px; }
+    @media (min-width: 981px) {
+      .hero-contact address { white-space: nowrap; }
+    }
+    .hotel-partners {
+      padding: 30px 0 34px;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .hotel-partners-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+    .hotel-partners-head h2 { margin: 0; font-family: var(--serif); font-size: 28px; font-weight: 600; line-height: 1.2; }
+    .hotel-partners-head span { color: var(--gold-deep); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+    .hotel-partners-marquee {
+      --partner-gap: 52px;
+      margin-top: 20px;
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+    }
+    .hotel-partners-track {
+      display: flex;
+      width: max-content;
+      gap: var(--partner-gap);
+      padding: 20px 0;
+      animation: partner-marquee 46s linear infinite;
+      will-change: transform;
+    }
+    .hotel-partners-list {
+      display: flex;
+      flex: none;
+      align-items: center;
+      gap: var(--partner-gap);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .hotel-partners-list li { display: flex; width: auto; min-height: 72px; flex: 0 0 auto; align-items: center; justify-content: center; }
+    .hotel-partners-list img { display: block; width: auto; height: auto; max-width: 180px; max-height: 62px; object-fit: contain; }
+    .hotel-partners-marquee:hover .hotel-partners-track { animation-play-state: paused; }
+    @keyframes partner-marquee {
+      to { transform: translateX(calc(-50% - (var(--partner-gap) / 2))); }
+    }
+    .story-section { background: var(--paper); }
+    .story-section .section-heading { display: block; margin-bottom: 42px; }
+    .story-section .section-heading h2 { max-width: 980px; }
+    .story-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      align-items: start;
+      padding: 26px 0 30px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .story-kicker { margin: 5px 0 0; color: var(--gold-deep); font-size: 12px; font-weight: 800; }
+    .story-statement { max-width: 1120px; margin: 0; color: var(--ink); font-family: var(--serif); font-size: 30px; font-weight: 600; line-height: 1.42; }
+    .story-system { margin-top: 28px; border: 1px solid var(--line); }
+    .story-system-head {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
+      gap: 48px;
+      align-items: end;
+      padding: 30px 32px;
+      color: var(--paper);
+      background: var(--ink);
+    }
+    .story-system-head small { display: block; color: #9eddd5; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+    .story-system-head h3 { margin: 9px 0 0; font-family: var(--serif); font-size: 33px; font-weight: 600; line-height: 1.2; }
+    .story-system-head p { max-width: 610px; margin: 0; color: rgba(246, 240, 230, 0.72); font-size: 13px; line-height: 1.7; }
+    .story-system-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .story-system-column { min-width: 0; padding: 26px 28px 30px; border-right: 1px solid var(--line); }
+    .story-system-column:last-child { border-right: 0; }
+    .story-system-label { display: flex; align-items: baseline; gap: 12px; margin: 0 0 18px; color: var(--gold-deep); font-size: 11px; font-weight: 800; }
+    .story-system-label b { color: var(--teal); font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
+    .story-system-column ul { margin: 0; padding: 0; list-style: none; }
+    .story-system-column li { padding: 15px 0 16px; border-top: 1px solid var(--line); }
+    .story-system-column strong { display: block; color: var(--ink); font-family: var(--serif); font-size: 18px; font-weight: 600; line-height: 1.35; }
+    .story-system-column span { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+    .story-system-foot { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 18px 28px; background: #efe2d0; border-top: 1px solid var(--line); }
+    .story-system-foot strong { color: var(--ink); font-family: var(--serif); font-size: 18px; font-weight: 600; }
+    .story-system-foot span { color: var(--muted); font-size: 12px; text-align: right; }
+
+    .revenue-section { background: var(--white); }
+    .revenue-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .revenue-item { min-height: 214px; padding: 28px 24px 24px; border-right: 1px solid var(--line); }
+    .revenue-item:last-child { border-right: 0; }
+    .revenue-no { color: var(--teal); font-family: Georgia, serif; font-size: 34px; line-height: 1; }
+    .revenue-item h3 { margin: 25px 0 8px; font-family: var(--serif); font-size: 22px; font-weight: 600; }
+    .revenue-item p { margin: 0; color: var(--muted); font-size: 13px; }
+    .income-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 36px;
+      padding: 28px 32px;
+      color: var(--white);
+      background: var(--gold-deep);
+    }
+    .income-banner strong { display: block; font-family: var(--serif); font-size: 34px; font-weight: 600; line-height: 1.22; }
+    .income-banner p { max-width: 820px; margin: 0; color: rgba(255, 253, 249, 0.86); font-size: 14px; }
+    .mode-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+    .mode-card { position: relative; padding: 24px; background: var(--paper); border: 1px solid var(--line); }
+    .mode-card--featured { background: #f0e1cf; border-color: rgba(154, 105, 56, 0.46); }
+    .mode-recommended { position: absolute; top: 0; right: 0; padding: 6px 10px; color: var(--white); background: var(--gold-deep); font-size: 10px; font-weight: 800; line-height: 1; }
+    .mode-card header { display: flex; align-items: center; gap: 12px; }
+    .mode-letter { display: grid; width: 34px; height: 34px; place-items: center; color: var(--white); background: var(--teal); border-radius: 50%; font-family: Georgia, serif; font-size: 18px; }
+    .mode-card h3 { margin: 0; font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.25; }
+    .mode-card p { margin: 18px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .mode-fit { margin: 20px 0 0; padding-top: 15px; color: var(--ink-soft); border-top: 1px solid var(--line); font-size: 12px; line-height: 1.55; }
+    .mode-fit strong { display: block; margin-bottom: 4px; color: var(--gold-deep); font-size: 11px; letter-spacing: 0; }
+    .yield-model { margin-top: 34px; padding: 32px; color: var(--paper); background: var(--ink); }
+    .yield-model-head { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px; align-items: end; }
+    .yield-model h3 { margin: 0; font-family: var(--serif); font-size: 31px; font-weight: 600; line-height: 1.25; }
+    .yield-model-head p { margin: 12px 0 0; color: rgba(246, 243, 237, 0.68); font-size: 12px; line-height: 1.65; }
+    .yield-control { min-width: 0; }
+    .yield-control label { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; color: #9eddd5; font-size: 12px; font-weight: 800; }
+    .yield-control output { color: #ebc78f; font-family: var(--serif); font-size: 29px; font-weight: 600; }
+    .yield-control input[type="range"] { width: 100%; height: 24px; margin: 13px 0 0; accent-color: #d7b47e; cursor: ew-resize; }
+    .yield-scale { display: flex; justify-content: space-between; color: rgba(246, 243, 237, 0.5); font-size: 10px; }
+    .yield-results { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 28px; border-top: 1px solid rgba(246, 243, 237, 0.22); border-bottom: 1px solid rgba(246, 243, 237, 0.22); }
+    .yield-result { min-width: 0; padding: 22px 22px 22px 0; border-right: 1px solid rgba(246, 243, 237, 0.22); }
+    .yield-result + .yield-result { padding-left: 22px; }
+    .yield-result:last-child { border-right: 0; }
+    .yield-result small { display: block; min-height: 38px; color: #9eddd5; font-size: 11px; font-weight: 800; line-height: 1.5; }
+    .yield-result strong { display: block; margin-top: 9px; color: #ebc78f; font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.2; }
+    .yield-result span { display: block; margin-top: 8px; color: rgba(246, 243, 237, 0.68); font-size: 11px; line-height: 1.55; }
+    .yield-totals { margin-top: 24px; }
+    .yield-totals-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+    .yield-totals-head h4 { margin: 0; color: var(--paper); font-family: var(--serif); font-size: 21px; font-weight: 600; }
+    .yield-totals-head p { margin: 0; color: rgba(246, 243, 237, 0.58); font-size: 11px; line-height: 1.5; text-align: right; }
+    .yield-total-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 14px; border: 1px solid rgba(235, 199, 143, 0.42); }
+    .yield-total { min-width: 0; padding: 20px 22px; border-right: 1px solid rgba(235, 199, 143, 0.28); }
+    .yield-total:last-child { border-right: 0; }
+    .yield-total-label { display: flex; align-items: center; gap: 10px; color: #9eddd5; font-size: 11px; font-weight: 800; line-height: 1.4; }
+    .yield-total-letter { display: grid; flex: 0 0 27px; width: 27px; height: 27px; place-items: center; color: var(--ink); background: #9eddd5; border-radius: 50%; font-family: Georgia, serif; font-size: 14px; }
+    .yield-total strong { display: block; margin-top: 15px; color: #ebc78f; font-family: var(--serif); font-size: 27px; font-weight: 600; line-height: 1.2; }
+    .yield-total > span { display: block; margin-top: 7px; color: rgba(246, 243, 237, 0.68); font-size: 11px; line-height: 1.5; }
+    .yield-total-note { margin: 10px 0 0; color: rgba(246, 243, 237, 0.48); font-size: 10px; line-height: 1.5; }
+    .yield-exclusion { display: grid; grid-template-columns: 120px 1fr; gap: 22px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(246, 243, 237, 0.12); }
+    .yield-exclusion strong { color: #ebc78f; font-size: 12px; }
+    .yield-exclusion p { margin: 0; color: rgba(246, 243, 237, 0.7); font-size: 12px; line-height: 1.65; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px; }
+    .benefit {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 22px;
+      align-items: start;
+      padding: 24px 0 26px;
+      border-top: 1px solid var(--line);
+    }
+    .benefit-number { color: var(--gold); font-family: Georgia, serif; font-size: 42px; line-height: 1; }
+    .benefit h3 { margin: 0 0 7px; font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.25; }
+    .benefit p { margin: 0; color: var(--muted); font-size: 14px; }
+    .responsibility-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; margin-top: 42px; }
+    .responsibility-column { padding-top: 20px; border-top: 1px solid var(--line); }
+    .responsibility-column h3 { margin: 0; font-family: var(--serif); font-size: 25px; font-weight: 600; line-height: 1.25; }
+    .responsibility-column ul { margin: 16px 0 0; padding: 0; list-style: none; }
+    .responsibility-column li { position: relative; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .responsibility-column li + li { margin-top: 8px; }
+    .responsibility-column li::before { position: absolute; top: 0.7em; left: 0; width: 7px; height: 7px; background: var(--coral); border-radius: 50%; content: ""; }
+
+    .deployment-section { background: var(--paper-deep); }
+    .deployment-grid { display: grid; gap: 38px; }
+    .deployment-block-title { margin: 0 0 14px; color: var(--gold-deep); font-size: 12px; font-weight: 800; }
+    .profile-list, .process-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .profile-list { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+    .profile-item { min-width: 0; padding: 20px 22px 21px 0; border-right: 1px solid var(--line); }
+    .profile-item + .profile-item { padding-left: 22px; }
+    .profile-item:last-child { border-right: 0; }
+    .profile-item strong { color: var(--ink); font-size: 13px; }
+    .profile-item span { display: block; margin-top: 9px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    .process-list { display: grid; grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid var(--line); }
+    .process-step { min-width: 0; padding: 17px 14px 19px 0; border-right: 1px solid var(--line); }
+    .process-step + .process-step { padding-left: 14px; }
+    .process-step:last-child { border-right: 0; }
+    .process-step b { display: grid; width: 28px; height: 28px; place-items: center; color: var(--white); background: var(--ink); border-radius: 50%; font-family: Georgia, serif; font-size: 14px; }
+    .process-step strong { display: block; margin-top: 12px; font-size: 13px; line-height: 1.35; }
+    .process-step span { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .capability-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 42px; }
+    .capability-card { min-height: 150px; padding: 20px; background: var(--white); border: 1px solid var(--line); }
+    .capability-card h3 { margin: 0; font-family: var(--serif); font-size: 20px; font-weight: 600; line-height: 1.25; }
+    .capability-card p { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 42px; }
+    .evidence-card { min-width: 0; margin: 0; padding: 12px; background: var(--white); border: 1px solid var(--line); }
+    .evidence-card--wide { grid-column: 1 / -1; padding: 0; overflow: hidden; }
+    .evidence-card--wide.site-gallery { background: transparent; border: 0; }
+    .evidence-card button { display: block; width: 100%; padding: 0; background: transparent; border: 0; cursor: zoom-in; }
+    .evidence-card img { width: 100%; aspect-ratio: 1.08; object-fit: contain; background: transparent; }
+    .evidence-card figcaption { padding: 11px 2px 1px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+    .site-gallery-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 18px 12px; }
+    .site-gallery-head figcaption { padding: 0; color: var(--ink); font-family: var(--serif); font-size: 18px; }
+    .site-gallery-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+    .evidence-card .site-gallery-control { display: grid; width: 36px; height: 36px; place-items: center; color: var(--ink); background: var(--paper); border: 1px solid var(--line); cursor: pointer; font-size: 20px; line-height: 1; }
+    .evidence-card .site-gallery-control:disabled { cursor: default; opacity: 0.35; }
+    .site-gallery-track { display: grid; grid-auto-columns: minmax(300px, 34%); grid-auto-flow: column; gap: 12px; overflow-x: auto; overscroll-behavior-inline: contain; padding: 0 18px 18px; scroll-behavior: smooth; scroll-snap-type: inline mandatory; scrollbar-color: var(--gold) var(--paper); scrollbar-width: thin; }
+    .site-gallery-item { min-width: 0; scroll-snap-align: start; }
+    .evidence-card .site-gallery-item img { display: block; width: 100%; height: 260px; aspect-ratio: auto; object-fit: cover; background: var(--paper); }
+
+    .selection-section { background: var(--paper-deep); }
+    .tab-list { display: flex; flex-wrap: wrap; gap: 8px; margin: -18px 0 28px; }
+    .tab {
+      min-height: 40px;
+      padding: 0 16px;
+      color: var(--ink-soft);
+      background: transparent;
+      border: 1px solid rgba(23, 60, 58, 0.32);
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .tab[aria-selected="true"], .tab:hover { color: var(--white); background: var(--ink); border-color: var(--ink); }
+    .selection-layout { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 54px; align-items: center; }
+    .selection-copy h3 { margin: 0; font-family: var(--serif); font-size: 35px; font-weight: 600; line-height: 1.18; }
+    .selection-copy p { margin: 18px 0 0; color: #59635f; font-size: 15px; }
+    .selection-copy ul { margin: 24px 0 0; padding: 0; list-style: none; }
+    .selection-copy li { display: flex; gap: 10px; align-items: baseline; margin: 9px 0; font-size: 14px; }
+    .selection-copy li::before { width: 7px; height: 7px; flex: 0 0 auto; margin-top: 3px; background: var(--coral); border-radius: 50%; content: ""; }
+    .selection-board { margin: 0; padding: 12px; background: var(--white); border: 1px solid rgba(23, 60, 58, 0.18); }
+    .selection-board button { display: block; width: 100%; padding: 0; background: transparent; border: 0; cursor: zoom-in; }
+    .selection-board img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #fff; }
+    .selection-board figcaption { padding: 14px 4px 2px; color: var(--muted); font-size: 12px; }
+
+    .brands-section { background: var(--white); }
+    .brands-layout { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 64px; align-items: center; }
+    .brands-copy h3 { margin: 0; font-family: var(--serif); font-size: 36px; font-weight: 600; line-height: 1.22; }
+    .brands-copy p { margin: 20px 0 0; color: var(--muted); font-size: 15px; }
+    .category-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+    .category-list li { padding: 6px 10px; color: var(--ink-soft); background: var(--teal-pale); font-size: 12px; font-weight: 700; }
+    .brands-figure { margin: 0; padding: 14px; background: var(--paper); border: 1px solid var(--line); }
+    .brands-figure button { display: block; width: 100%; padding: 0; background: transparent; border: 0; cursor: zoom-in; }
+    .brands-figure img { width: 100%; aspect-ratio: 1280 / 721; object-fit: contain; background: #fff; }
+    .brands-figure figcaption { padding: 12px 3px 0; color: var(--muted); font-size: 12px; }
+
+    .models-section { background: var(--ink); color: var(--paper); }
+    .models-section .eyebrow { color: #9eddd5; }
+    .models-section .section-heading h2 { color: var(--paper); }
+    .models-section .section-heading p { color: rgba(246, 240, 230, 0.7); }
+    .models-page { overflow: hidden; border: 1px solid rgba(246, 240, 230, 0.24); background: var(--white); }
+    .models-catalog { padding: 42px 34px 34px; color: var(--ink); background: #fff6e9; }
+    .catalog-kicker { margin: 0 0 10px; color: var(--gold-deep); font-size: 12px; font-weight: 800; letter-spacing: 0; }
+    .catalog-heading-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+    .catalog-heading h3 { max-width: 450px; margin: 0; font-family: var(--serif); font-size: 36px; font-weight: 600; line-height: 1.18; }
+    .catalog-heading p { max-width: 460px; margin: 16px 0 0; color: #a67845; font-size: 13px; }
+    .machine-carousel-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+    .machine-carousel-control { display: grid; width: 42px; height: 42px; place-items: center; color: var(--ink); background: transparent; border: 1px solid rgba(154, 105, 56, 0.38); cursor: pointer; font-size: 21px; line-height: 1; transition: color 180ms ease, background-color 180ms ease; }
+    .machine-carousel-control:hover, .machine-carousel-control:focus-visible { color: var(--paper); background: var(--ink); }
+    .machine-carousel-control:disabled { color: rgba(23, 60, 58, 0.34); background: transparent; cursor: default; }
+    .machine-grid { display: grid; grid-auto-columns: minmax(252px, calc((100% - 32px) / 3)); grid-auto-flow: column; gap: 16px; overflow-x: auto; overscroll-behavior-inline: contain; margin-top: 30px; padding: 0 0 18px; scroll-behavior: smooth; scroll-snap-type: inline mandatory; scrollbar-color: var(--gold) #f3e7d7; scrollbar-width: thin; }
+    .machine-card { display: grid; grid-template-rows: 250px auto auto; gap: 8px; min-width: 0; padding: 0 0 4px; color: var(--ink); text-align: left; background: transparent; border: 0; cursor: zoom-in; scroll-snap-align: start; }
+    .machine-card-image { display: grid; place-items: center; min-height: 250px; overflow: hidden; background: rgba(255, 253, 249, 0.44); border: 1px solid rgba(154, 105, 56, 0.2); }
+    .machine-card img { width: 100%; height: 250px; object-fit: contain; object-position: center; transition: transform 240ms ease; }
+    .machine-card:hover img, .machine-card:focus-visible img { transform: scale(1.035); }
+    .machine-card strong { display: block; font-size: 14px; line-height: 1.3; }
+    .machine-card small { display: block; color: #a67845; font-size: 11px; line-height: 1.3; }
+    .contact-section { padding: 88px 0 44px; background: var(--gold); color: var(--ink); scroll-margin-top: 86px; }
+    .contact-layout { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: end; }
+    .contact-section h2 { max-width: 650px; margin: 0; font-family: var(--serif); font-size: 48px; font-weight: 600; line-height: 1.18; }
+    .contact-slogan span { display: block; }
+    .contact-slogan span + span { margin-top: 4px; }
+    .contact-section p { max-width: 570px; margin: 20px 0 0; color: rgba(23, 60, 58, 0.76); font-size: 15px; }
+    .contact-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(23, 60, 58, 0.28); }
+    .contact-list li { padding: 14px 0; border-bottom: 1px solid rgba(23, 60, 58, 0.28); font-size: 14px; }
+    .contact-list strong { display: inline-block; width: 46px; color: var(--ink-soft); }
+    .contact-list a { text-decoration: underline; text-underline-offset: 3px; }
+    .footer-line { display: flex; justify-content: space-between; gap: 24px; margin-top: 70px; padding-top: 18px; border-top: 1px solid rgba(23, 60, 58, 0.28); color: rgba(23, 60, 58, 0.66); font-size: 12px; }
+
+    .media-dialog {
+      width: min(1000px, calc(100% - 32px));
+      max-height: calc(100% - 32px);
+      padding: 0;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+    .media-dialog::backdrop { background: rgba(10, 24, 23, 0.78); }
+    .dialog-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+    .dialog-title { margin: 0; font-family: var(--serif); font-size: 18px; font-weight: 600; }
+    .dialog-close { min-width: 40px; min-height: 34px; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 2px; cursor: pointer; font-size: 20px; line-height: 1; }
+    .dialog-content { padding: 18px; overflow: auto; }
+    .dialog-content img { width: 100%; background: transparent; }
+    .dialog-caption { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 980px) {
+      .hero-copy { max-width: 760px; }
+      .hotel-partners-marquee { --partner-gap: 44px; }
+      .brands-layout, .contact-layout { grid-template-columns: 1fr; gap: 28px; }
+      .story-system-head { grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr); gap: 32px; }
+      .story-system-grid { grid-template-columns: 1fr; }
+      .story-system-column { border-right: 0; border-bottom: 1px solid var(--line); }
+      .story-system-column:last-child { border-bottom: 0; }
+      .selection-layout { grid-template-columns: 0.84fr 1.16fr; gap: 34px; }
+      .profile-list { grid-template-columns: repeat(2, 1fr); }
+      .profile-item:nth-child(2) { border-right: 0; }
+      .profile-item:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(100% - 32px, 560px); }
+      .section { padding: 72px 0; }
+      .section-heading { display: block; margin-bottom: 32px; }
+      .section-heading h2, .contact-section h2 { font-size: 38px; }
+      .section-heading p { margin-top: 16px; }
+      .story-section .section-heading { margin-bottom: 30px; }
+      .story-intro { grid-template-columns: 132px minmax(0, 1fr); gap: 20px; padding: 22px 0 25px; }
+      .story-statement { font-size: 26px; }
+      .story-system-head { grid-template-columns: 1fr; gap: 14px; padding: 26px 24px; }
+      .story-system-grid { grid-template-columns: 1fr; }
+      .story-system-column { padding: 22px 24px 24px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .story-system-column:last-child { border-bottom: 0; }
+      .story-system-foot { align-items: flex-start; padding: 18px 24px; }
+      .nav-wrap { min-height: 62px; }
+      .mobile-toggle { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 38px; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 2px; cursor: pointer; font-size: 20px; }
+      .nav-links { position: absolute; top: 62px; right: 16px; left: 16px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 16px 16px; background: var(--paper); border: 1px solid var(--line); }
+      .nav-links.is-open { display: flex; }
+      .nav-links a { padding: 13px 0; border-bottom: 1px solid var(--line); }
+      .nav-links a::after { display: none; }
+      .nav-cta { margin-top: 12px; text-align: center; }
+      .hero-layout { padding: 60px 0 72px; }
+      .hero h1 { font-size: 48px; }
+      .hero-lead { font-size: 16px; }
+      .hero-contact { grid-template-columns: 1fr; }
+      .hero-contact-item { padding: 12px 0; }
+      .hero-contact-item + .hero-contact-item { padding-left: 0; border-top: 1px solid rgba(246, 240, 230, 0.2); border-left: 0; }
+      .hotel-partners { padding: 26px 0 30px; }
+      .hotel-partners-head { display: block; }
+      .hotel-partners-head span { display: block; margin-top: 6px; }
+      .hotel-partners-marquee { --partner-gap: 34px; margin-top: 16px; }
+      .hotel-partners-track { padding: 16px 0; animation-duration: 36s; }
+      .hotel-partners-list li { min-height: 64px; }
+      .hotel-partners-list img { max-width: 156px; max-height: 54px; }
+      .revenue-grid { grid-template-columns: repeat(2, 1fr); }
+      .revenue-item:nth-child(2) { border-right: 0; }
+      .revenue-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .income-banner { gap: 14px; padding: 24px; }
+      .mode-grid, .responsibility-grid { grid-template-columns: 1fr; gap: 12px; }
+      .yield-model { padding: 26px 22px; }
+      .yield-model-head { grid-template-columns: 1fr; gap: 24px; }
+      .yield-results { grid-template-columns: 1fr; }
+      .yield-result, .yield-result + .yield-result { padding: 18px 0; border-right: 0; border-bottom: 1px solid rgba(246, 243, 237, 0.22); }
+      .yield-result:last-child { border-bottom: 0; }
+      .yield-result small { min-height: 0; }
+      .yield-totals-head { display: block; }
+      .yield-totals-head p { margin-top: 6px; text-align: left; }
+      .yield-total-grid { grid-template-columns: 1fr; }
+      .yield-total { padding: 18px 0; margin: 0 18px; border-right: 0; border-bottom: 1px solid rgba(235, 199, 143, 0.28); }
+      .yield-total:last-child { border-bottom: 0; }
+      .yield-exclusion { grid-template-columns: 1fr; gap: 8px; }
+      .capability-grid { grid-template-columns: repeat(2, 1fr); }
+      .evidence-grid { grid-template-columns: 1fr; }
+      .site-gallery-head { padding: 14px 14px 10px; }
+      .site-gallery-head figcaption { font-size: 16px; }
+      .site-gallery-track { grid-auto-columns: 86%; gap: 10px; padding: 0 14px 14px; }
+      .evidence-card .site-gallery-item img { height: 220px; }
+      .evidence-card--wide { grid-column: auto; }
+      .benefits-grid { grid-template-columns: 1fr; gap: 0; }
+      .process-list { grid-template-columns: repeat(2, 1fr); }
+      .process-step:nth-child(even) { border-right: 0; }
+      .process-step:nth-child(-n + 4) { border-bottom: 1px solid var(--line); }
+      .selection-layout { grid-template-columns: 1fr; gap: 32px; }
+      .selection-copy h3, .brands-copy h3 { font-size: 31px; }
+      .models-catalog { padding: 30px 22px 24px; }
+      .catalog-heading h3 { font-size: 31px; }
+      .catalog-heading-row { align-items: flex-start; gap: 20px; }
+      .machine-grid { grid-auto-columns: minmax(240px, 82%); gap: 12px; margin-top: 24px; }
+      .machine-card { grid-template-rows: 264px auto auto; }
+      .machine-card-image, .machine-card img { height: 264px; min-height: 264px; }
+      .footer-line { display: block; margin-top: 50px; }
+      .footer-line span + span { display: block; margin-top: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hotel-partners-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+      .hotel-partners-track { animation: none; transform: none; }
+      .hotel-partners-list[aria-hidden="true"] { display: none; }
+    }
+
+    @media (max-width: 400px) {
+      .container { width: calc(100% - 24px); }
+      .hero h1 { font-size: 42px; }
+      .brand-logo { width: 160px; }
+      .section-heading h2, .contact-section h2 { font-size: 34px; }
+      .revenue-item { min-height: 194px; padding: 22px 16px; }
+      .revenue-item h3 { font-size: 19px; }
+      .benefit { grid-template-columns: 54px 1fr; gap: 14px; }
+      .benefit-number { font-size: 34px; }
+      .benefit h3 { font-size: 20px; }
+      .story-intro { grid-template-columns: 1fr; gap: 10px; }
+      .story-kicker { margin-top: 0; }
+      .story-statement { font-size: 24px; }
+      .story-system-head { padding: 24px 20px; }
+      .story-system-head h3 { font-size: 28px; }
+      .story-system-column { padding: 20px; }
+      .story-system-foot { display: block; padding: 17px 20px; }
+      .story-system-foot span { display: block; margin-top: 7px; text-align: left; }
+      .catalog-heading-row { display: block; }
+      .machine-carousel-actions { justify-content: flex-end; margin-top: 20px; }
+      .machine-grid { grid-auto-columns: 86%; }
+      .profile-list { grid-template-columns: 1fr; }
+      .profile-item, .profile-item + .profile-item { padding: 17px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .profile-item:last-child { border-bottom: 0; }
+      .capability-grid { grid-template-columns: 1fr; }
+      .process-list { grid-template-columns: 1fr; }
+      .process-step, .process-step + .process-step { padding: 16px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .process-step:last-child { border-bottom: 0; }
+    }
+
+    /* Refined web system */
+    body { background: var(--paper); }
+    .container { width: min(1280px, calc(100% - 64px)); }
+    .section { padding: 108px 0; }
+    .section-heading { margin-bottom: 50px; }
+    .section-heading h2 { max-width: 1060px; font-size: 50px; line-height: 1.2; text-wrap: pretty; }
+    .section-heading > div:only-child h2 { text-wrap: pretty; }
+    .eyebrow { color: var(--gold-deep); font-size: 11px; }
+
+    .site-header { background: rgba(247, 246, 241, 0.94); }
+    .nav-wrap { min-height: 76px; gap: 18px; }
+    .brand-logo { width: 172px; }
+    .view-switch {
+      display: inline-flex;
+      flex: 0 0 auto;
+      margin-left: auto;
+      padding: 2px;
+      background: rgba(16, 61, 57, 0.045);
+      border: 1px solid rgba(16, 61, 57, 0.1);
+      border-radius: 4px;
+    }
+    .view-switch-button {
+      display: inline-flex;
+      min-width: 52px;
+      height: 27px;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 0 8px;
+      color: var(--muted);
+      background: transparent;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .view-switch-button.is-active { color: var(--white); background: var(--ink); }
+    .view-switch-icon { font-size: 11px; line-height: 1; }
+    .nav-links { gap: 17px; font-size: 13px; }
+
+    .hero { position: relative; min-height: 680px; background: #0d3935; }
+    .hero-layout { position: relative; min-height: 680px; padding: 78px 0 82px; }
+    .hero-copy { position: relative; z-index: 2; max-width: 790px; }
+    .hero h1 { max-width: 720px; font-size: 68px; line-height: 1.08; }
+    .hero h1 em { color: #edc88f; }
+    .hero-lead { max-width: 620px; margin-top: 26px; }
+    .hero-contact { max-width: 900px; margin-top: 34px; }
+    .hero-machine {
+      position: absolute;
+      z-index: 1;
+      right: -150px;
+      bottom: -18px;
+      width: 560px;
+      max-height: 620px;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: drop-shadow(0 28px 28px rgba(0, 0, 0, 0.2));
+      pointer-events: none;
+    }
+    .hotel-partners { padding: 38px 0 40px; }
+    .hotel-partners-head h2 { font-size: 30px; }
+    .hotel-partners-marquee { --partner-gap: 58px; }
+
+    .story-section, .benefits-section { background: var(--paper); }
+    .story-intro { grid-template-columns: minmax(0, 1fr); padding: 30px 0 34px; }
+    .story-statement { max-width: 1160px; font-size: 32px; }
+    .story-system { margin-top: 32px; border: 0; }
+    .story-system-head { padding: 34px 38px; border-radius: 6px 6px 0 0; }
+    .story-system-grid { background: var(--white); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .story-system-foot { background: var(--teal-pale); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); border-radius: 0 0 6px 6px; }
+
+    .revenue-section { background: var(--white); }
+    .revenue-item { min-height: 204px; }
+    .income-banner { padding: 34px 38px; background: #a46f42; border-radius: 6px; }
+    .mode-grid { gap: 16px; }
+    .mode-card { padding: 28px; background: #f5f4ef; border-radius: 6px; }
+    .mode-card--featured { background: #edf4ef; border-color: rgba(39, 143, 134, 0.38); box-shadow: inset 0 4px 0 var(--teal); }
+    .mode-recommended { top: 12px; right: 12px; color: var(--coral); background: transparent; }
+    .yield-model { margin-top: 42px; padding: 40px; border-radius: 6px; }
+
+    .deployment-section { background: #e8efeb; }
+    .capability-grid { gap: 22px; }
+    .capability-card { min-height: 138px; padding: 22px 0 0; background: transparent; border: 0; border-top: 2px solid var(--gold); }
+    .evidence-grid { gap: 18px; }
+    .evidence-card:not(.site-gallery) { background: transparent; border: 0; }
+    .site-gallery-head { padding: 18px 0 14px; }
+    .site-gallery-track { padding: 0 0 14px; }
+    .evidence-card .site-gallery-control { background: transparent; }
+
+    .brands-section { background: var(--white); }
+    .selection-section { background: #eef2ed; }
+    .selection-board { background: transparent; }
+    .models-section { background: #0d3935; }
+    .models-catalog { background: #f7f5ef; border-radius: 6px; }
+    .machine-card { background: #fbfaf6; border-radius: 4px; }
+    .machine-card-image { background: #f1f3ee; }
+    .contact-section { color: var(--white); background: #c65e40; }
+    .contact-section .eyebrow, .contact-list strong { color: #ffe0b7; }
+    .contact-section p, .contact-list, .footer-line { color: rgba(255, 255, 255, 0.78); }
+    .contact-list { border-color: rgba(255, 255, 255, 0.28); }
+    .contact-list li { border-color: rgba(255, 255, 255, 0.2); }
+    .contact-list a, .contact-list span { color: var(--white); }
+    .footer-line { border-color: rgba(255, 255, 255, 0.2); }
+
+    .js-enabled .web-reveal { opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms ease; }
+    .js-enabled .web-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    /* Presentation mode: fixed 1920 x 1080 stage, uniformly scaled. */
+    .presentation-shell[hidden] { display: none; }
+    .presentation-shell {
+      position: fixed;
+      z-index: 200;
+      inset: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background: #082c29;
+      overscroll-behavior: none;
+      touch-action: none;
+    }
+    .deck-stage {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 36px 90px rgba(0, 0, 0, 0.34);
+      transform: translate(-50%, -50%) scale(var(--deck-scale, 1));
+      transform-origin: center center;
+    }
+    .deck-stage .slide {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+      background: var(--paper);
+      pointer-events: none;
+      transition: opacity 180ms ease;
+    }
+    .deck-stage .slide.active { visibility: visible; opacity: 1; pointer-events: auto; }
+    .deck-frame { position: absolute; inset: 0; padding: 70px 88px 64px; overflow: hidden; }
+    .deck-frame::before {
+      position: absolute;
+      z-index: 6;
+      top: 42px;
+      right: 88px;
+      width: 170px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+    .deck-brandline { position: absolute; z-index: 6; top: 27px; left: 88px; color: var(--gold-deep); font-size: 17px; font-weight: 700; }
+    .deck-slide--cover .deck-brandline,
+    .deck-slide--system .deck-brandline,
+    .deck-slide--yield .deck-brandline,
+    .deck-slide--digital .deck-brandline,
+    .deck-slide--contact .deck-brandline { color: rgba(255, 255, 255, 0.76); }
+    .deck-content { width: 1744px; transform: scale(var(--deck-fit, 1)); transform-origin: top left; }
+    .deck-content > .container, .deck-content .container { width: 100%; max-width: none; }
+    .deck-content .section { padding: 0; border: 0; }
+    .deck-content .section-heading { margin-bottom: 34px; }
+    .deck-content .section-heading h2 { max-width: 1500px; font-size: 58px; line-height: 1.16; }
+    .deck-content .section-heading p { max-width: 500px; font-size: 18px; }
+    .deck-content .eyebrow { font-size: 15px; }
+    .deck-content .story-section,
+    .deck-content .revenue-section,
+    .deck-content .benefits-section,
+    .deck-content .deployment-section,
+    .deck-content .brands-section,
+    .deck-content .selection-section,
+    .deck-content .models-section,
+    .deck-content .contact-section { background: transparent; }
+    .deck-content .story-system { margin-top: 22px; }
+    .deck-content .story-intro { grid-template-columns: minmax(0, 1fr); gap: 0; padding: 20px 0 24px; }
+    .deck-content .story-statement { max-width: 1500px; font-size: 38px; }
+    .deck-content .story-system-head { grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr); padding: 25px 30px; }
+    .deck-content .story-system-grid { grid-template-columns: repeat(3, 1fr); }
+    .deck-content .story-system-column { padding: 20px 24px; border-right: 1px solid var(--line); border-bottom: 0; }
+    .deck-content .story-system-column:last-child { border-right: 0; }
+    .deck-content .story-system-column li { padding: 11px 0; }
+    .deck-content .story-system-foot { display: flex; align-items: center; padding: 14px 24px; }
+    .deck-content .revenue-grid { grid-template-columns: repeat(4, 1fr); }
+    .deck-content .revenue-item { min-height: 180px; padding: 22px; }
+    .deck-content .income-banner { margin-top: 24px; padding: 24px 30px; }
+    .deck-content .mode-grid { grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+    .deck-content .mode-card { padding: 22px; }
+    .deck-content .yield-model { margin-top: 0; padding: 36px 42px; }
+    .deck-content .yield-model-head { grid-template-columns: 0.9fr 1.1fr; }
+    .deck-content .yield-results, .deck-content .yield-total-grid { grid-template-columns: repeat(3, 1fr); }
+    .deck-content .yield-result, .deck-content .yield-result + .yield-result { padding: 22px; border-right: 1px solid rgba(246, 243, 237, 0.22); border-bottom: 0; }
+    .deck-content .yield-result:first-child { padding-left: 0; }
+    .deck-content .yield-result:last-child { border-right: 0; }
+    .deck-content .yield-total { margin: 0; padding: 20px 22px; border-right: 1px solid rgba(235, 199, 143, 0.28); border-bottom: 0; }
+    .deck-content .yield-total:last-child { border-right: 0; }
+    .deck-content .yield-exclusion { grid-template-columns: 120px 1fr; }
+    .deck-content .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .deck-content .benefit { padding: 20px 0; }
+    .deck-content .responsibility-grid { grid-template-columns: repeat(2, 1fr); margin-top: 24px; }
+    .deck-slide--responsibility { background: #f2efe7 !important; }
+    .deck-responsibility-heading { margin: 54px 0 62px; }
+    .deck-responsibility-heading .eyebrow { margin: 0 0 16px; color: var(--gold-deep); font-size: 15px; font-weight: 800; text-transform: uppercase; }
+    .deck-responsibility-heading h2 { max-width: 1380px; margin: 0; font-family: var(--serif); font-size: 76px; font-weight: 600; line-height: 1.1; }
+    .deck-responsibility-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 72px; }
+    .deck-responsibility-grid .responsibility-column { padding: 38px 24px 0 0; border-top: 2px solid var(--gold); }
+    .deck-responsibility-grid .responsibility-column h3 { font-size: 50px; }
+    .deck-responsibility-grid .responsibility-column ul { margin-top: 34px; }
+    .deck-responsibility-grid .responsibility-column li { padding-left: 34px; font-size: 29px; line-height: 1.58; }
+    .deck-responsibility-grid .responsibility-column li + li { margin-top: 22px; }
+    .deck-responsibility-grid .responsibility-column li::before { top: 0.66em; width: 12px; height: 12px; }
+    .deck-slide--yield .yield-control input[type="range"] { height: 34px; cursor: grab; }
+    .deck-slide--yield .yield-control input[type="range"]:active { cursor: grabbing; }
+    .deck-slide--yield .yield-control input[type="range"]:focus-visible { outline: 3px solid #f2b86e; outline-offset: 6px; }
+    .deck-content .deployment-grid { gap: 26px; }
+    .deck-content .profile-list { grid-template-columns: repeat(4, 1fr); }
+    .deck-content .profile-item, .deck-content .profile-item + .profile-item { padding: 20px 22px; border-right: 1px solid var(--line); border-bottom: 0; }
+    .deck-content .profile-item:first-child { padding-left: 0; }
+    .deck-content .profile-item:last-child { border-right: 0; }
+    .deck-content .process-list { grid-template-columns: repeat(5, 1fr); }
+    .deck-content .process-step, .deck-content .process-step + .process-step { padding: 17px 14px; border-right: 1px solid var(--line); border-bottom: 0; }
+    .deck-content .process-step:first-child { padding-left: 0; }
+    .deck-content .process-step:last-child { border-right: 0; }
+    .deck-content .capability-grid { grid-template-columns: repeat(4, 1fr); margin-top: 28px; }
+    .deck-content .brands-layout { grid-template-columns: 0.7fr 1.3fr; gap: 54px; }
+    .deck-content .selection-layout { grid-template-columns: 0.72fr 1.28fr; gap: 54px; }
+    .deck-content .brands-board img, .deck-content .selection-board img { max-height: 500px; object-fit: contain; }
+    .deck-content .models-catalog { padding: 32px; }
+    .deck-content .catalog-heading-row { display: flex; }
+    .deck-content .machine-grid { grid-auto-columns: 24%; margin-top: 24px; overflow: hidden; }
+    .deck-content .machine-card { grid-template-rows: 310px auto auto; }
+    .deck-content .machine-card:nth-child(n+5) { display: none; }
+    .deck-content .machine-card-image, .deck-content .machine-card img { height: 310px; min-height: 310px; }
+    .deck-content .tab-list { margin-bottom: 26px; }
+    .deck-content .contact-layout { grid-template-columns: 1.15fr 0.85fr; padding-top: 80px; }
+    .deck-content .contact-section { min-height: 900px; padding: 0; color: var(--white); }
+
+    .deck-slide--hero { color: var(--white); background: #0d3935 !important; }
+    .deck-slide--hero .deck-frame { padding: 100px 92px; }
+    .deck-hero-layout { position: relative; display: grid; grid-template-columns: 1.28fr 0.72fr; min-height: 880px; align-items: center; gap: 52px; }
+    .deck-hero-copy h1 { margin: 0; font-family: var(--serif); font-size: 94px; font-weight: 600; line-height: 1.04; }
+    .deck-hero-copy h1 em { display: block; color: #edc88f; font-style: normal; }
+    .deck-hero-copy .hero-lead { max-width: 780px; color: rgba(255, 255, 255, 0.72); font-size: 24px; }
+    .deck-hero-copy .hero-contact { grid-template-columns: 240px 300px minmax(0, 1fr); max-width: 950px; }
+    .deck-hero-copy .hero-contact a, .deck-hero-copy .hero-contact address { font-size: 17px; }
+    .deck-hero-machine { width: 630px; max-height: 850px; object-fit: contain; filter: drop-shadow(0 36px 34px rgba(0, 0, 0, 0.26)); }
+
+    .deck-slide--partners { background: var(--white) !important; }
+    .deck-partner-title { margin: 60px 0 50px; font-family: var(--serif); font-size: 72px; font-weight: 600; }
+    .deck-partner-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px 54px; align-items: center; }
+    .deck-partner-grid figure { display: grid; height: 150px; margin: 0; place-items: center; border-bottom: 1px solid var(--line); }
+    .deck-partner-grid img { width: auto; height: auto; max-width: 230px; max-height: 94px; object-fit: contain; }
+
+    .deck-slide--gallery { background: #e8efeb !important; }
+    .deck-gallery-title { margin: 54px 0 36px; font-family: var(--serif); font-size: 64px; font-weight: 600; }
+    .deck-gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .deck-gallery-grid img { width: 100%; height: 650px; object-fit: cover; border-radius: 4px; }
+    .deck-slide--models { color: var(--white); background: #0d3935 !important; }
+    .deck-slide--contact { color: var(--white); background: #c65e40 !important; }
+    .deck-slide--contact .deck-brandline { color: #ffe0b7; }
+    .deck-slide--contact .deck-frame::before { background: #ffe0b7; }
+
+    /* Independent presentation master. Web sections are intentionally not reused here. */
+    .ppt-slide {
+      --ppt-ink: #103d38;
+      --ppt-muted: #61716e;
+      --ppt-accent: #d56446;
+      --ppt-gold: #c9954f;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 78px 72px 56px;
+      overflow: hidden;
+      color: var(--ppt-ink);
+      background: #f5f2eb;
+    }
+    .ppt-slide::after {
+      position: absolute;
+      right: 72px;
+      bottom: 42px;
+      width: 116px;
+      height: 3px;
+      background: var(--ppt-gold);
+      content: "";
+    }
+    .ppt-slide--dark { color: #f7f2e8; background: #103d38; }
+    .ppt-slide--warm { color: #fff8ec; background: #ca6042; }
+    .ppt-slide--soft { background: #e8efeb; }
+    .ppt-slide--white { background: #fbfaf6; }
+    .ppt-slide--dark::after, .ppt-slide--warm::after { background: rgba(255, 228, 184, 0.72); }
+    .ppt-head {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.32fr);
+      align-items: end;
+      gap: 70px;
+      margin-top: 20px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(16, 61, 56, 0.18);
+    }
+    .ppt-slide--dark .ppt-head, .ppt-slide--warm .ppt-head { border-color: rgba(255, 255, 255, 0.22); }
+    .ppt-kicker {
+      margin: 0 0 12px;
+      color: #a06c34;
+      font-size: 17px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .ppt-slide--dark .ppt-kicker, .ppt-slide--warm .ppt-kicker { color: #9ee1d9; }
+    .ppt-title {
+      margin: 0;
+      max-width: 1360px;
+      font-family: var(--serif);
+      font-size: 66px;
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .ppt-head-note { margin: 0; color: var(--ppt-muted); font-size: 20px; line-height: 1.65; }
+    .ppt-slide--dark .ppt-head-note, .ppt-slide--warm .ppt-head-note { color: rgba(255, 255, 255, 0.72); }
+    .ppt-body { position: relative; z-index: 1; flex: 1; min-height: 0; padding-top: 34px; }
+    .ppt-footer {
+      position: absolute;
+      z-index: 3;
+      right: 220px;
+      bottom: 38px;
+      color: rgba(16, 61, 56, 0.52);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .ppt-slide--dark .ppt-footer, .ppt-slide--warm .ppt-footer { color: rgba(255, 255, 255, 0.52); }
+    .ppt-rule-label { color: #a06c34; font-size: 16px; font-weight: 800; }
+    .ppt-slide--dark .ppt-rule-label { color: #8fe0d7; }
+
+    .ppt-cover { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 60px; height: 100%; }
+    .ppt-cover-logo { width: 310px; height: 68px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
+    .ppt-cover-copy h1 { margin: 54px 0 28px; font-family: var(--serif); font-size: 94px; font-weight: 600; line-height: 1.04; }
+    .ppt-cover-copy h1 span { display: block; color: #efc78c; }
+    .ppt-cover-copy > p { max-width: 820px; margin: 0; color: rgba(255, 255, 255, 0.74); font-size: 24px; line-height: 1.72; }
+    .ppt-cover-contact { display: grid; grid-template-columns: 0.8fr 1.1fr 2fr; gap: 0; margin-top: 46px; border-top: 1px solid rgba(255,255,255,.22); border-bottom: 1px solid rgba(255,255,255,.22); }
+    .ppt-cover-contact div { min-width: 0; padding: 18px 20px 18px 0; }
+    .ppt-cover-contact div + div { padding-left: 24px; border-left: 1px solid rgba(255,255,255,.18); }
+    .ppt-cover-contact small { display: block; color: #93ddd4; font-size: 13px; font-weight: 800; }
+    .ppt-cover-contact strong { display: block; margin-top: 7px; color: #fff; font-size: 17px; line-height: 1.4; }
+    .ppt-cover-visual { position: relative; display: grid; height: 850px; place-items: center; }
+    .ppt-cover-visual::before { position: absolute; width: 650px; height: 650px; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; content: ""; }
+    .ppt-cover-machine { position: relative; width: 710px; height: 850px; object-fit: contain; filter: drop-shadow(0 34px 34px rgba(0,0,0,.28)); }
+    .ppt-cover-badge { position: absolute; right: 20px; bottom: 90px; padding: 14px 18px; color: #103d38; background: #efc78c; font-size: 16px; font-weight: 800; }
+
+    .ppt-partner-grid { display: grid; grid-template-columns: repeat(4, 1fr); height: 690px; border-top: 1px solid rgba(16,61,56,.16); border-left: 1px solid rgba(16,61,56,.16); }
+    .ppt-partner-grid figure { display: grid; min-width: 0; margin: 0; padding: 20px; place-items: center; background: #fbfaf6; border-right: 1px solid rgba(16,61,56,.16); border-bottom: 1px solid rgba(16,61,56,.16); }
+    .ppt-partner-grid img { width: auto; height: auto; max-width: 285px; max-height: 102px; object-fit: contain; }
+
+    .ppt-ecosystem { display: grid; grid-template-columns: 1fr 420px 1fr; align-items: center; gap: 32px; height: 565px; }
+    .ppt-ecosystem-side { display: grid; gap: 12px; }
+    .ppt-ecosystem-item { position: relative; min-height: 0; padding: 16px 20px; background: rgba(255,255,255,.72); border-top: 2px solid var(--ppt-gold); }
+    .ppt-ecosystem-item b { display: block; color: var(--ppt-accent); font-size: 15px; }
+    .ppt-ecosystem-item strong { display: block; margin-top: 5px; font-family: var(--serif); font-size: 23px; font-weight: 600; }
+    .ppt-ecosystem-item span { display: block; margin-top: 5px; color: var(--ppt-muted); font-size: 13.5px; line-height: 1.45; }
+    .ppt-ecosystem-center { position: relative; display: grid; height: 555px; place-items: center; }
+    .ppt-ecosystem-center::before, .ppt-ecosystem-center::after { position: absolute; border: 1px solid rgba(16,61,56,.18); border-radius: 50%; content: ""; }
+    .ppt-ecosystem-center::before { width: 490px; height: 490px; }
+    .ppt-ecosystem-center::after { width: 370px; height: 370px; }
+    .ppt-ecosystem-center img { position: relative; z-index: 1; width: 370px; height: 520px; object-fit: contain; filter: drop-shadow(0 26px 22px rgba(36,40,35,.18)); }
+    .ppt-ecosystem-label { position: absolute; z-index: 2; bottom: 8px; padding: 10px 20px; color: #fff; background: #103d38; font-family: var(--serif); font-size: 22px; }
+    .ppt-ecosystem-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 14px; }
+    .ppt-ecosystem-strip span { padding: 15px 18px; color: #103d38; background: rgba(255,255,255,.7); border-left: 3px solid var(--ppt-gold); font-size: 15px; font-weight: 700; text-align: center; }
+
+    .ppt-pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; height: 600px; }
+    .ppt-pillar { position: relative; display: flex; flex-direction: column; padding: 34px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); }
+    .ppt-pillar b { color: #efc78c; font-family: var(--serif); font-size: 46px; font-weight: 400; }
+    .ppt-pillar h3 { margin: 72px 0 16px; font-family: var(--serif); font-size: 34px; font-weight: 600; }
+    .ppt-pillar p { margin: 0; color: rgba(255,255,255,.7); font-size: 18px; line-height: 1.65; }
+    .ppt-pillar small { margin-top: auto; padding-top: 22px; color: #8fe0d7; border-top: 1px solid rgba(255,255,255,.16); font-size: 15px; line-height: 1.5; }
+    .ppt-band-note { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 24px; padding: 22px 28px; color: #103d38; background: #efc78c; }
+    .ppt-band-note strong { font-family: var(--serif); font-size: 26px; }
+    .ppt-band-note span { font-size: 17px; }
+
+    .ppt-mode-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 26px; height: 640px; }
+    .ppt-mode { position: relative; display: flex; flex-direction: column; padding: 38px; background: #fbfaf6; border: 1px solid rgba(16,61,56,.18); }
+    .ppt-mode--recommended { color: #fff; background: #103d38; border-color: #103d38; transform: translateY(-14px); box-shadow: 0 24px 38px rgba(16,61,56,.15); }
+    .ppt-mode-letter { display: grid; width: 56px; height: 56px; place-items: center; color: #fff; background: #2ea99d; border-radius: 50%; font-family: var(--serif); font-size: 28px; }
+    .ppt-mode--recommended .ppt-mode-letter { color: #103d38; background: #efc78c; }
+    .ppt-mode h3 { margin: 32px 0 18px; font-family: var(--serif); font-size: 38px; font-weight: 600; line-height: 1.2; }
+    .ppt-mode p { margin: 0; color: var(--ppt-muted); font-size: 18px; line-height: 1.65; }
+    .ppt-mode--recommended p { color: rgba(255,255,255,.72); }
+    .ppt-mode-fit { margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(16,61,56,.18); }
+    .ppt-mode--recommended .ppt-mode-fit { border-color: rgba(255,255,255,.2); }
+    .ppt-mode-fit b { display: block; color: #a06c34; font-size: 14px; }
+    .ppt-mode--recommended .ppt-mode-fit b { color: #8fe0d7; }
+    .ppt-mode-fit span { display: block; margin-top: 8px; font-size: 17px; line-height: 1.55; }
+    .ppt-recommended { position: absolute; top: 26px; right: 28px; color: #103d38; background: #efc78c; padding: 7px 12px; font-size: 13px; font-weight: 800; }
+
+    .ppt-yield-control { display: grid; grid-template-columns: 330px 1fr 180px; align-items: end; gap: 36px; }
+    .ppt-yield-control label { color: #8fe0d7; font-size: 16px; font-weight: 800; }
+    .ppt-yield-control output { color: #efc78c; font-family: var(--serif); font-size: 54px; text-align: right; }
+    .ppt-yield-range-wrap { display: grid; gap: 14px; }
+    .ppt-yield-range-wrap input { width: 100%; accent-color: #efc78c; cursor: pointer; }
+    .ppt-yield-ticks { display: flex; justify-content: space-between; color: rgba(255,255,255,.52); font-size: 13px; }
+    .ppt-yield-metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 30px; border-top: 1px solid rgba(255,255,255,.2); border-left: 1px solid rgba(255,255,255,.2); }
+    .ppt-yield-metric { padding: 26px 30px; border-right: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); }
+    .ppt-yield-metric small { color: #8fe0d7; font-size: 15px; font-weight: 800; }
+    .ppt-yield-metric strong { display: block; margin-top: 20px; color: #efc78c; font-family: var(--serif); font-size: 44px; font-weight: 500; }
+    .ppt-yield-metric span { display: block; margin-top: 8px; color: rgba(255,255,255,.67); font-size: 16px; }
+    .ppt-yield-totals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; }
+    .ppt-yield-total { display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 18px; padding: 19px 22px; color: #103d38; background: #e7c797; }
+    .ppt-yield-total b { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid rgba(16,61,56,.3); border-radius: 50%; font-family: var(--serif); font-size: 22px; }
+    .ppt-yield-total strong { display: block; font-family: var(--serif); font-size: 28px; font-weight: 600; }
+    .ppt-yield-total span { display: block; margin-top: 2px; font-size: 13px; }
+    .ppt-yield-exclusion { display: grid; grid-template-columns: 170px 1fr; gap: 24px; margin-top: 22px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); }
+    .ppt-yield-exclusion strong { color: #efc78c; font-size: 16px; }
+    .ppt-yield-exclusion p { margin: 0; color: rgba(255,255,255,.64); font-size: 15px; line-height: 1.65; }
+
+    .ppt-value-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 22px; height: 650px; }
+    .ppt-value { display: grid; grid-template-columns: 84px 1fr; align-items: center; gap: 28px; padding: 34px; background: #fbfaf6; border-top: 3px solid var(--ppt-gold); }
+    .ppt-value b { color: #d56446; font-family: var(--serif); font-size: 58px; font-weight: 400; }
+    .ppt-value h3 { margin: 0; font-family: var(--serif); font-size: 34px; font-weight: 600; }
+    .ppt-value p { margin: 12px 0 0; color: var(--ppt-muted); font-size: 17px; line-height: 1.62; }
+
+    .ppt-duty-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; height: 650px; }
+    .ppt-duty { padding: 38px 42px; background: #fbfaf6; border-top: 4px solid var(--ppt-gold); }
+    .ppt-duty h3 { margin: 0 0 30px; font-family: var(--serif); font-size: 42px; font-weight: 600; }
+    .ppt-duty ul { margin: 0; padding: 0; list-style: none; }
+    .ppt-duty li { position: relative; padding: 18px 0 18px 34px; color: var(--ppt-muted); border-top: 1px solid rgba(16,61,56,.14); font-size: 20px; line-height: 1.55; }
+    .ppt-duty li::before { position: absolute; top: 30px; left: 0; width: 10px; height: 10px; background: #d56446; border-radius: 50%; content: ""; }
+
+    .ppt-rollout { display: grid; grid-template-rows: 255px 1fr; gap: 28px; height: 650px; }
+    .ppt-profile-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(16,61,56,.18); border-left: 1px solid rgba(16,61,56,.18); }
+    .ppt-profile { padding: 28px; background: rgba(255,255,255,.62); border-right: 1px solid rgba(16,61,56,.18); border-bottom: 1px solid rgba(16,61,56,.18); }
+    .ppt-profile b { color: #d56446; font-size: 15px; }
+    .ppt-profile strong { display: block; margin-top: 12px; font-family: var(--serif); font-size: 27px; }
+    .ppt-profile span { display: block; margin-top: 10px; color: var(--ppt-muted); font-size: 15px; line-height: 1.55; }
+    .ppt-process { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; align-items: stretch; }
+    .ppt-process::before { position: absolute; top: 33px; right: 10%; left: 10%; height: 1px; background: rgba(16,61,56,.24); content: ""; }
+    .ppt-step { position: relative; padding: 0 18px 22px; background: #f5f2eb; }
+    .ppt-step b { position: relative; z-index: 1; display: grid; width: 66px; height: 66px; place-items: center; color: #fff; background: #103d38; border-radius: 50%; font-family: var(--serif); font-size: 26px; }
+    .ppt-step strong { display: block; margin-top: 24px; font-family: var(--serif); font-size: 27px; }
+    .ppt-step span { display: block; margin-top: 10px; color: var(--ppt-muted); font-size: 15px; line-height: 1.5; }
+
+    .ppt-gallery { display: grid; grid-template-columns: 1.1fr .92fr .78fr; grid-template-rows: repeat(2, 1fr); gap: 16px; height: 710px; }
+    .ppt-gallery figure { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; background: #d9e0dd; }
+    .ppt-gallery figure:first-child { grid-row: 1 / 3; }
+    .ppt-gallery figure:nth-child(4) { grid-column: 3; grid-row: 1 / 3; }
+    .ppt-gallery img { width: 100%; height: 100%; object-fit: cover; }
+    .ppt-gallery figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 14px 18px; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.64)); font-size: 15px; }
+
+    .ppt-brand-layout { display: grid; grid-template-columns: 1.18fr .82fr; gap: 46px; height: 650px; }
+    .ppt-brand-image { display: grid; min-width: 0; padding: 24px; place-items: center; background: #fff; border: 1px solid rgba(16,61,56,.14); }
+    .ppt-brand-image img { width: 100%; height: 100%; object-fit: contain; }
+    .ppt-category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .ppt-category { display: flex; align-items: center; padding: 20px 22px; background: #103d38; color: #fff; font-family: var(--serif); font-size: 24px; }
+    .ppt-category::before { width: 8px; height: 8px; margin-right: 14px; background: #efc78c; border-radius: 50%; content: ""; }
+
+    .ppt-selection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; height: 665px; }
+    .ppt-selection { display: grid; grid-template-rows: 390px 1fr; min-width: 0; min-height: 0; background: #fbfaf6; border: 1px solid rgba(16,61,56,.16); }
+    .ppt-selection:nth-child(2) { background: #e8efeb; }
+    .ppt-selection img { grid-column: 1; grid-row: 1; width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: contain; padding: 18px; overflow: hidden; background: rgba(255,255,255,.82); }
+    .ppt-selection-copy { grid-column: 1; grid-row: 2; display: flex; min-width: 0; min-height: 0; flex-direction: column; justify-content: center; padding: 24px 28px; overflow: hidden; border-top: 1px solid rgba(16,61,56,.14); }
+    .ppt-selection-copy b { color: #d56446; font-size: 13px; }
+    .ppt-selection-copy h3 { margin: 7px 0 0; font-family: var(--serif); font-size: 29px; font-weight: 600; }
+    .ppt-selection-copy p { margin: 12px 0 0; color: var(--ppt-muted); font-size: 15px; line-height: 1.55; }
+
+    .ppt-machine-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; height: 650px; }
+    .ppt-machine { display: grid; grid-template-rows: 1fr auto; min-width: 0; padding: 14px 14px 18px; background: #fbfaf6; border: 1px solid rgba(16,61,56,.16); }
+    .ppt-machine img { width: 100%; height: 520px; object-fit: contain; }
+    .ppt-machine strong { display: block; padding-top: 12px; font-family: var(--serif); font-size: 20px; text-align: center; }
+    .ppt-machine small { display: block; margin-top: 5px; color: var(--ppt-muted); font-size: 12px; text-align: center; }
+
+    .ppt-digital-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 670px; }
+    .ppt-digital { display: grid; grid-template-rows: 1fr auto; min-width: 0; padding: 22px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); }
+    .ppt-digital img { width: 100%; height: 500px; object-fit: contain; }
+    .ppt-digital-copy { padding-top: 18px; border-top: 1px solid rgba(255,255,255,.17); }
+    .ppt-digital h3 { margin: 0; font-family: var(--serif); font-size: 28px; font-weight: 600; }
+    .ppt-digital p { margin: 8px 0 0; color: rgba(255,255,255,.66); font-size: 15px; line-height: 1.5; }
+
+    .ppt-contact { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 70px; height: 100%; }
+    .ppt-contact h1 { margin: 0; font-family: var(--serif); font-size: 68px; font-weight: 600; line-height: 1.12; }
+    .ppt-contact h1 span { display: block; white-space: nowrap; }
+    .ppt-contact h1 span + span { margin-top: 10px; color: #ffe0ae; }
+    .ppt-contact-copy > p { max-width: 750px; margin: 30px 0 0; color: rgba(255,255,255,.75); font-size: 22px; line-height: 1.7; }
+    .ppt-contact-list { margin: 42px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.25); }
+    .ppt-contact-list li { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.2); font-size: 18px; }
+    .ppt-contact-list b { color: #ffe0ae; }
+    .ppt-contact-visual { position: relative; display: grid; height: 850px; place-items: center; }
+    .ppt-contact-visual::before { position: absolute; width: 660px; height: 660px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; content: ""; }
+    .ppt-contact-visual img { position: relative; width: 700px; height: 850px; object-fit: contain; filter: drop-shadow(0 34px 30px rgba(74,28,14,.26)); }
+
+    .slide.active .ppt-head, .slide.active .ppt-body > *, .slide.active .ppt-cover > * {
+      animation: ppt-rise 420ms both;
+    }
+    .slide.active .ppt-body > *:nth-child(2), .slide.active .ppt-cover > *:nth-child(2) { animation-delay: 70ms; }
+    @keyframes ppt-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    .deck-controls {
+      position: fixed;
+      z-index: 260;
+      right: 22px;
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px;
+      color: var(--white);
+      background: rgba(5, 35, 32, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 6px;
+      backdrop-filter: blur(12px);
+    }
+    .deck-control { display: grid; height: 36px; place-items: center; color: var(--white); background: transparent; border: 0; border-radius: 4px; cursor: pointer; font-weight: 700; }
+    .deck-control:hover, .deck-control:focus-visible { background: rgba(255, 255, 255, 0.12); }
+    .deck-control:disabled { cursor: default; opacity: 0.35; }
+    .deck-exit { min-width: 54px; padding: 0 12px; color: #f6c68e; font-size: 12px; }
+    .deck-arrow { width: 38px; font-size: 20px; }
+    .deck-progress-wrap { width: 120px; height: 3px; overflow: hidden; background: rgba(255, 255, 255, 0.2); }
+    .deck-progress { display: block; width: 100%; height: 100%; background: #e8b26d; transform: scaleX(0); transform-origin: left; transition: transform 250ms ease; }
+    .deck-page { min-width: 58px; color: rgba(255, 255, 255, 0.74); font-size: 11px; text-align: center; }
+
+    @media (max-width: 1180px) {
+      .nav-links { gap: 12px; }
+      .nav-links a:nth-child(5), .nav-links a:nth-child(6) { display: none; }
+      .hero-machine { right: -210px; opacity: 0.78; }
+    }
+    @media (max-width: 980px) {
+      .container { width: min(100% - 40px, 760px); }
+      .section { padding: 84px 0; }
+      .section-heading h2 { font-size: 42px; }
+      .view-switch { margin-left: auto; }
+      .nav-links a:nth-child(5), .nav-links a:nth-child(6) { display: block; }
+      .hero { min-height: auto; }
+      .hero-layout { min-height: 720px; align-items: flex-start; padding-top: 70px; }
+      .hero-copy { max-width: 100%; }
+      .hero h1 { font-size: 56px; }
+      .hero-machine { right: -110px; bottom: -140px; width: 420px; opacity: 0.34; }
+    }
+    @media (max-width: 760px) {
+      .container { width: calc(100% - 32px); }
+      .nav-wrap { min-height: 64px; }
+      .brand-logo { width: 145px; }
+      .view-switch-button { min-width: 38px; padding: 0 8px; }
+      .view-switch-button span:last-child { display: none; }
+      .nav-links { top: 64px; }
+      .section { padding: 70px 0; }
+      .section-heading h2 { font-size: 38px; }
+      .hero-layout { min-height: 760px; padding: 56px 0 66px; }
+      .hero h1 { font-size: 48px; }
+      .hero-machine { right: -100px; bottom: -80px; width: 350px; }
+      .story-system-head { border-radius: 4px 4px 0 0; }
+      .story-system-grid { grid-template-columns: 1fr; }
+      .income-banner, .yield-model { border-radius: 4px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .js-enabled .web-reveal { opacity: 1; transform: none; transition: none; }
+      .deck-stage .slide, .deck-progress { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="返回森海计划指南首页">
+        <img class="brand-logo" src="assets/senhai-logo-dark.png" alt="SENHAI 森海计划">
+      </a>
+      <div class="view-switch" role="group" aria-label="浏览模式">
+        <button class="view-switch-button is-active" type="button" data-view-mode="web" aria-pressed="true" title="网页阅读模式">
+          <span class="view-switch-icon" aria-hidden="true">▤</span><span>网页</span>
+        </button>
+        <button class="view-switch-button" type="button" data-view-mode="presentation" aria-pressed="false" title="PPT 演示模式">
+          <span class="view-switch-icon" aria-hidden="true">▰</span><span>演示</span>
+        </button>
+      </div>
+      <button class="mobile-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav" class="nav-links" aria-label="页面导航">
+        <a href="#story">合作模式</a>
+        <a href="#revenue">合作收益</a>
+        <a href="#benefits">合作价值</a>
+        <a href="#deployment">点位推进</a>
+        <a href="#brands">品牌品类</a>
+        <a href="#selection">选品方案</a>
+        <a href="#models">机型与支持</a>
+        <a class="nav-cta" href="#contact">联系合作</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">Hotel new retail · cooperation guide</p>
+          <h1>酒店新零售<em>自助机合作服务指南</em></h1>
+          <p class="hero-lead">把旅途中的即时需求，变成酒店可以持续经营的服务入口。森海计划提供自助终端、选品供应链与线上线下运营支持，帮助酒店搭建自己的新零售版图。</p>
+          <div class="hero-contact" aria-label="合作联系方式">
+            <div class="hero-contact-item">
+              <span class="hero-contact-label">电话</span>
+              <a href="tel:15757460353">157-5746-0353</a>
+            </div>
+            <div class="hero-contact-item">
+              <span class="hero-contact-label">邮箱</span>
+              <a href="mailto:1404549497@qq.com">1404549497@qq.com</a>
+            </div>
+            <div class="hero-contact-item">
+              <span class="hero-contact-label">地址</span>
+              <address>杭州市西湖区竞舟路 228 号文新数字产业园 611 室</address>
+            </div>
+          </div>
+        </div>
+        <img class="hero-machine" src="assets/machine-classic.png" alt="森海计划酒店新零售自助机实机">
+      </div>
+    </section>
+
+    <section class="hotel-partners" aria-labelledby="hotel-partners-title">
+      <div class="container">
+        <div class="hotel-partners-head">
+          <h2 id="hotel-partners-title">已合作酒店品牌</h2>
+          <span>Partnered hotel brands</span>
+        </div>
+        <div class="hotel-partners-marquee">
+          <div class="hotel-partners-track">
+            <ul class="hotel-partners-list" aria-label="已合作酒店品牌列表">
+              <li><img src="assets/hotel-partners/jinjiang-inn.png" alt="锦江之星"></li>
+              <li><img src="assets/hotel-partners/atour-group.png" alt="亚朵集团"></li>
+              <li><img src="assets/hotel-partners/ji-hotel.png" alt="全季酒店"></li>
+              <li><img src="assets/hotel-partners/madison-hotel.png" alt="美仑国际酒店"></li>
+              <li><img src="assets/hotel-partners/vienna-hotel.png" alt="维也纳酒店"></li>
+              <li><img src="assets/hotel-partners/intercity-hotel.png" alt="城际酒店"></li>
+              <li><img src="assets/hotel-partners/manxin-hotel.png" alt="漫心酒店"></li>
+              <li><img src="assets/hotel-partners/hotel-h-mark.png" alt="合作酒店品牌"></li>
+              <li><img src="assets/hotel-partners/orange-hotel.png" alt="桔子酒店"></li>
+              <li><img src="assets/hotel-partners/new-century-hotels.png" alt="开元酒店集团"></li>
+              <li><img src="assets/hotel-partners/magnolia-hotel.png" alt="白玉兰酒店"></li>
+              <li><img src="assets/hotel-partners/mochi-boutique-hotel.png" alt="墨憩精品酒店"></li>
+              <li><img src="assets/hotel-partners/nanyuan-inn.png" alt="南苑 e 家"></li>
+              <li><img src="assets/hotel-partners/egreen-hotels.png" alt="四季青藤酒店"></li>
+              <li><img src="assets/hotel-partners/fantawild.png" alt="华强方特 FANTAWILD"></li>
+            </ul>
+            <ul class="hotel-partners-list" aria-hidden="true">
+              <li><img src="assets/hotel-partners/jinjiang-inn.png" alt=""></li>
+              <li><img src="assets/hotel-partners/atour-group.png" alt=""></li>
+              <li><img src="assets/hotel-partners/ji-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/madison-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/vienna-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/intercity-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/manxin-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/hotel-h-mark.png" alt=""></li>
+              <li><img src="assets/hotel-partners/orange-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/new-century-hotels.png" alt=""></li>
+              <li><img src="assets/hotel-partners/magnolia-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/mochi-boutique-hotel.png" alt=""></li>
+              <li><img src="assets/hotel-partners/nanyuan-inn.png" alt=""></li>
+              <li><img src="assets/hotel-partners/egreen-hotels.png" alt=""></li>
+              <li><img src="assets/hotel-partners/fantawild.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section story-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / partnership model</p>
+            <h2>一台设备做入口，背后是一套持续经营体系。</h2>
+          </div>
+        </div>
+        <div class="story-intro">
+          <p class="story-statement">选择森海自助柜体系，不止零售那么简单。</p>
+        </div>
+        <div class="story-system" aria-label="森海自助柜持续经营体系">
+          <div class="story-system-head">
+            <div>
+              <small>Core business entry</small>
+              <h3>酒店非房收入增长入口</h3>
+            </div>
+            <p>以一台设备承接住客即时需求，以系统沉淀销售与库存数据，再把供应链、商城、景旅和广告营销逐步接入酒店经营场景。</p>
+          </div>
+          <div class="story-system-grid">
+            <section class="story-system-column" aria-labelledby="story-service-title">
+              <h4 id="story-service-title" class="story-system-label"><b>01</b>住客与基础服务</h4>
+              <ul>
+                <li><strong>住客扫码购买或免费领取</strong><span>覆盖牙具、隐私、应急、卫生、洗护、亲子及电子配件等即时需求。</span></li>
+                <li><strong>牙具领取与耗品降本模式</strong><span>结合酒店现有采购、使用量和合作方式，测算可验证的基础服务价值。</span></li>
+              </ul>
+            </section>
+            <section class="story-system-column" aria-labelledby="story-operation-title">
+              <h4 id="story-operation-title" class="story-system-label"><b>02</b>系统与经营底座</h4>
+              <ul>
+                <li><strong>成熟线上线下后台系统</strong><span>连接设备、小程序与运营后台，支撑住客自助和酒店端经营查看。</span></li>
+                <li><strong>销售、库存与酒店分润数据</strong><span>持续记录真实订单、商品销售、库存状态及酒店分润口径。</span></li>
+                <li><strong>按月对账，持续经营复盘</strong><span>以点位数据复盘选品、补货和运营表现，再决定优化或扩大。</span></li>
+              </ul>
+            </section>
+            <section class="story-system-column" aria-labelledby="story-growth-title">
+              <h4 id="story-growth-title" class="story-system-label"><b>03</b>供应链与增值延展</h4>
+              <ul>
+                <li><strong>供应链帮你建</strong><span>组织商品、补货、售后及本地运营，具体责任与结算按点位方案确认。</span></li>
+                <li><strong>商城 / 景旅接口可扩展</strong><span>建联本地服务 &amp; 景区票务，按接口进度与真实订单逐步接入。</span></li>
+                <li><strong>广告营销与转化</strong><span>屏幕与小程序具备营销展示能力，相关转化与收益按实际订单验证。</span></li>
+              </ul>
+            </section>
+          </div>
+          <div class="story-system-foot">
+            <strong>已有小规模实投与真实订单</strong>
+            <span>先用样板点位跑通，再依据经营数据扩大。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="revenue" class="section revenue-section" aria-labelledby="revenue-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / revenue model</p>
+            <h2 id="revenue-title">三种合作方式，按酒店条件选择。</h2>
+          </div>
+        </div>
+        <div class="revenue-grid">
+          <article class="revenue-item">
+            <div class="revenue-no">01</div>
+            <h3>自助柜零售</h3>
+            <p>覆盖隐私、应急、卫生、洗护、亲子和电子配件等住客即时需求。</p>
+          </article>
+          <article class="revenue-item">
+            <div class="revenue-no">02</div>
+            <h3>酒店耗品供应链</h3>
+            <p>按酒店实际采购需求组织牙具及其他旅行用品，探索采购优惠与降本。</p>
+          </article>
+          <article class="revenue-item">
+            <div class="revenue-no">03</div>
+            <h3>商城与景旅分佣</h3>
+            <p>可按接口和订单接入酒店商城、本地游、门票及周边服务，形成服务延展。</p>
+          </article>
+          <article class="revenue-item">
+            <div class="revenue-no">04</div>
+            <h3>广告营销与转化</h3>
+            <p>设备屏幕、商品陈列和小程序具备展示能力，广告订单和转化收益仍需实际验证。</p>
+          </article>
+        </div>
+        <div class="income-banner">
+          <strong>纯单体柜机零售收益测算模型</strong>
+          <p>商城、景旅、广告和品牌合作属于可扩展能力，不作为固定收益承诺。</p>
+        </div>
+        <div class="mode-grid" aria-label="三种合作方式">
+          <article class="mode-card">
+            <header><span class="mode-letter">B</span><h3>酒店自有牙具 + 零售分润</h3></header>
+            <p>酒店使用自有合规牙具，按整机销售额示例口径获得提成，牙具成本由酒店承担。</p>
+            <p class="mode-fit"><strong>更适合</strong>已有牙具供应，想保留采购并分享销售收益的酒店。</p>
+          </article>
+          <article class="mode-card mode-card--featured">
+            <span class="mode-recommended">最推荐</span>
+            <header><span class="mode-letter">A</span><h3>免费提供牙具</h3></header>
+            <p>森海提供约定牙具，酒店节省采购成本；该方式不参与自助柜零售分润。</p>
+            <p class="mode-fit"><strong>更适合</strong>重视耗材降本和住客基础服务的酒店。</p>
+          </article>
+          <article class="mode-card">
+            <header><span class="mode-letter">C</span><h3>森海采购牙具 + 零售分润</h3></header>
+            <p>森海提供牙具供应链服务，酒店按整机销售额示例口径获得提成，采购降本按实际价格测算。</p>
+            <p class="mode-fit"><strong>更适合</strong>原采购成本较高，或希望更换供应渠道的酒店。</p>
+          </article>
+        </div>
+        <div class="yield-model" aria-labelledby="yield-title">
+          <div class="yield-model-head">
+            <div>
+              <h3 id="yield-title">1–1,000 台点位规模收益演示</h3>
+              <p>拖动设备数量，以资料中的单点月度样例作静态演示。所有结果均为测算值，不构成固定收益承诺。</p>
+            </div>
+            <div class="yield-control">
+              <label for="machine-count"><span>设备数量</span><output id="machine-count-output" for="machine-count">100 台</output></label>
+              <input id="machine-count" type="range" min="1" max="1000" step="1" value="100" aria-describedby="yield-exclusion-copy">
+              <div class="yield-scale" aria-hidden="true"><span>1</span><span>250</span><span>500</span><span>750</span><span>1,000</span></div>
+            </div>
+          </div>
+          <div class="yield-results" aria-live="polite">
+            <article class="yield-result">
+              <small>样板交易规模参考 · 柜机零售收益</small>
+              <strong id="yield-sales-month">300,000 元 / 月</strong>
+              <span id="yield-sales-year">约 3,600,000 元 / 年</span>
+            </article>
+            <article class="yield-result">
+              <small>B / C · 整机提成示例</small>
+              <strong id="yield-share-month">45,000 元 / 月</strong>
+              <span id="yield-share-year">约 540,000 元 / 年</span>
+            </article>
+            <article class="yield-result">
+              <small>A · 牙具采购降本示例</small>
+              <strong id="yield-saving-month">84,000 元 / 月</strong>
+              <span id="yield-saving-year">约 1,008,000 元 / 年</span>
+            </article>
+          </div>
+          <section class="yield-totals" aria-labelledby="yield-totals-title" aria-live="polite">
+            <div class="yield-totals-head">
+              <h4 id="yield-totals-title">A / B / C 方案合计收益</h4>
+              <p>按当前样例口径汇总，三种方案互相独立。</p>
+            </div>
+            <div class="yield-total-grid">
+              <article class="yield-total">
+                <div class="yield-total-label"><span class="yield-total-letter">A</span><span>免费提供牙具</span></div>
+                <strong id="yield-total-a-month">84,000 元 / 月</strong>
+                <span id="yield-total-a-year">约 1,008,000 元 / 年</span>
+                <p class="yield-total-note">合计为牙具采购降本</p>
+              </article>
+              <article class="yield-total">
+                <div class="yield-total-label"><span class="yield-total-letter">B</span><span>酒店自有牙具 + 零售分润</span></div>
+                <strong id="yield-total-b-month">45,000 元 / 月</strong>
+                <span id="yield-total-b-year">约 540,000 元 / 年</span>
+                <p class="yield-total-note">合计为柜机零售提成</p>
+              </article>
+              <article class="yield-total">
+                <div class="yield-total-label"><span class="yield-total-letter">C</span><span>森海采购牙具 + 零售分润</span></div>
+                <strong id="yield-total-c-month">45,000 元 / 月</strong>
+                <span id="yield-total-c-year">约 540,000 元 / 年</span>
+                <p class="yield-total-note">合计仅含柜机零售提成；牙具采购降本不计入，按实际采购价另行测算</p>
+              </article>
+            </div>
+          </section>
+          <div class="yield-exclusion" id="yield-exclusion-copy">
+            <strong>模型明确不包含</strong>
+            <p>其他供应链成本优化、酒店零售礼品体系、景旅产品佣金、广告收益分成，以及品牌合作等增量。上述收益须按真实采购、订单、接口进度和合作合同另行测算；A、B、C 为互相独立的合作方案，C 方案合计仅含柜机零售提成，牙具采购降本不计入合计，实际以酒店采购价另行测算。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="section" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / why senhai</p>
+            <h2 id="benefits-title">四个直接价值，酒店和住客都更轻松。</h2>
+          </div>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit">
+            <div class="benefit-number">01</div>
+            <div><h3>住客更方便</h3><p>牙具及应急用品可自助领取或购买，覆盖夜间、隐私和临时需求。</p></div>
+          </article>
+          <article class="benefit">
+            <div class="benefit-number">02</div>
+            <div><h3>前台更轻量</h3><p>扫码、支付、领取、库存和订单由系统承接，减少重复解释和人工售卖。</p></div>
+          </article>
+          <article class="benefit">
+            <div class="benefit-number">03</div>
+            <div><h3>酒店有收益</h3><p>可按合作模式获得零售分润，或通过免费牙具方案降低耗品采购支出。</p></div>
+          </article>
+          <article class="benefit">
+            <div class="benefit-number">04</div>
+            <div><h3>服务可延展</h3><p>未来可按真实订单接入商城、本地游、品牌试用及营销活动，形成住客触达入口。</p></div>
+          </article>
+        </div>
+        <div class="responsibility-grid">
+          <article class="responsibility-column">
+            <h3>森海计划负责什么</h3>
+            <ul>
+              <li>组织设备配置、扫码购买/领取、销售与库存统计、远程状态及故障提醒。</li>
+              <li>根据酒店客群配置应急、隐私、卫生、洗护、亲子及电子配件等商品。</li>
+              <li>组织安装、补货、售后和运营优化，责任边界以合同及点位安排为准。</li>
+              <li>提供订单、销售、库存和酒店分润数据，按协议周期对账结算。</li>
+            </ul>
+          </article>
+          <article class="responsibility-column">
+            <h3>酒店需要配合什么</h3>
+            <ul>
+              <li>提供大堂、电梯口或住客主要动线等适合摆放的位置。</li>
+              <li>确认房间数、房价、入住/人流、牙具用量及现有服务方式。</li>
+              <li>住客有需求时进行必要引导，并协助现场基础沟通。</li>
+              <li>按约定完成合同、进场、对账和经营复盘。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="deployment" class="section deployment-section" aria-labelledby="deployment-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 / site & rollout</p>
+            <h2 id="deployment-title">先找到合适点位，再把服务跑起来。</h2>
+          </div>
+        </div>
+        <div class="deployment-grid">
+          <div>
+            <h3 class="deployment-block-title">优先点位画像</h3>
+            <ul class="profile-list" aria-label="优先点位画像">
+              <li class="profile-item"><strong>房量与客流</strong><span>约 80-150 间房，入住与间夜相对稳定。</span></li>
+              <li class="profile-item"><strong>客群与房价</strong><span>商务、短途、亲子或旅游客群明显，房价约 200-400 元优先验证。</span></li>
+              <li class="profile-item"><strong>位置条件</strong><span>大堂、电梯口或住客必经动线可见，周边即时消费供给相对不足。</span></li>
+              <li class="profile-item"><strong>酒店配合</strong><span>愿意把牙具领取、应急用品指引与自助机结合，并提供经营数据。</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="deployment-block-title">从接触到落地的五步</h3>
+            <ol class="process-list" aria-label="从接触到落地的五步">
+              <li class="process-step"><b>1</b><strong>点位初筛</strong><span>确认房量、房价、入住/人流、牙具用量和摆放位置。</span></li>
+              <li class="process-step"><b>2</b><strong>方案测算</strong><span>比较零售分润与免费牙具两种模式，明确观察指标。</span></li>
+              <li class="process-step"><b>3</b><strong>现场确认</strong><span>确认设备尺寸、电源、动线、进场和酒店配合。</span></li>
+              <li class="process-step"><b>4</b><strong>签约上线</strong><span>完成合同、选品、设备进场、调试和员工简短培训。</span></li>
+              <li class="process-step"><b>5</b><strong>经营复盘</strong><span>按月对账，连续观察三个月后决定保留、优化或调整模式。</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="capability-grid" aria-label="设备与系统能力">
+          <article class="capability-card"><h3>约 32 寸屏</h3><p>支持标准、亲子或文旅主题外观，设备形态可按场景定制。</p></article>
+          <article class="capability-card"><h3>50-60 个货道</h3><p>可组合一次性用品、隐私应急、卫生洗护、亲子和电子配件。</p></article>
+          <article class="capability-card"><h3>住客端自助</h3><p>支持扫码购买、免费领取、商品陈列及广告营销，缩短服务路径。</p></article>
+          <article class="capability-card"><h3>运营端可追踪</h3><p>支持销售、库存、酒店分润统计，以及远程状态和故障提醒。</p></article>
+        </div>
+        <div class="evidence-grid" aria-label="森海项目实景与系统界面">
+          <figure class="evidence-card evidence-card--wide site-gallery">
+            <div class="site-gallery-head">
+              <figcaption>酒店点位实景 · 大堂、前台与多种设备场景</figcaption>
+              <div class="site-gallery-actions" aria-label="点位实拍翻页">
+                <button class="site-gallery-control" type="button" data-gallery-direction="-1" aria-label="查看上一组点位实拍" disabled>←</button>
+                <button class="site-gallery-control" type="button" data-gallery-direction="1" aria-label="查看下一组点位实拍">→</button>
+              </div>
+            </div>
+            <div id="site-gallery-track" class="site-gallery-track" tabindex="0" aria-label="酒店点位实拍横向画廊">
+              <button class="site-gallery-item" type="button" data-media="assets/site-scenes/hotel-lobby-cabinet.png" data-caption="酒店大堂旅行补给柜机" aria-label="查看酒店大堂旅行补给柜机实拍大图">
+                <img src="assets/site-scenes/hotel-lobby-cabinet.png" alt="酒店大堂内的森海旅行补给柜机">
+              </button>
+              <button class="site-gallery-item" type="button" data-media="assets/site-scenes/hotel-family-area.jpg" data-caption="亲子餐厅旁的旅行补给柜机" aria-label="查看亲子餐厅旅行补给柜机实拍大图">
+                <img src="assets/site-scenes/hotel-family-area.jpg" alt="亲子餐厅旁摆放的森海旅行补给柜机">
+              </button>
+              <button class="site-gallery-item" type="button" data-media="assets/site-scenes/hotel-lobby-machines.png" data-caption="酒店大堂自助设备组合" aria-label="查看酒店大堂自助设备组合实拍大图">
+                <img src="assets/site-scenes/hotel-lobby-machines.png" alt="酒店大堂内多台自助设备组合">
+              </button>
+              <button class="site-gallery-item" type="button" data-media="assets/site-scenes/hotel-public-area.png" data-caption="酒店公共区域旅行补给柜机" aria-label="查看酒店公共区域旅行补给柜机实拍大图">
+                <img src="assets/site-scenes/hotel-public-area.png" alt="酒店公共区域内的森海旅行补给柜机">
+              </button>
+              <button class="site-gallery-item" type="button" data-media="assets/site-scenes/hotel-front-desk.png" data-caption="酒店前台旁旅行补给柜机" aria-label="查看酒店前台旅行补给柜机实拍大图">
+                <img src="assets/site-scenes/hotel-front-desk.png" alt="酒店前台旁的森海旅行补给柜机">
+              </button>
+              <button class="site-gallery-item" type="button" data-media="assets/site-scenes/machine-workshop.png" data-caption="柜机整备与设备展示" aria-label="查看柜机整备现场实拍大图">
+                <img src="assets/site-scenes/machine-workshop.png" alt="多台森海柜机的整备与展示现场">
+              </button>
+            </div>
+          </figure>
+          <figure class="evidence-card">
+            <button type="button" data-media="assets/senhai-mini-program-transparent.png" data-caption="森海小程序界面：住客端与酒店管理中心" aria-label="查看森海小程序界面大图">
+              <img src="assets/senhai-mini-program-transparent.png" alt="森海小程序住客端和酒店管理中心界面">
+            </button>
+            <figcaption>森海小程序 · 住客端与酒店管理中心</figcaption>
+          </figure>
+          <figure class="evidence-card">
+            <button type="button" data-media="assets/senhai-cabinet-system-transparent.png" data-caption="自助机系统界面：免费领取、商品购买与订单统计" aria-label="查看自助机系统界面大图">
+              <img src="assets/senhai-cabinet-system-transparent.png" alt="自助机免费领取、商品购买和订单统计界面">
+            </button>
+            <figcaption>自助机系统 · 领取、购买与订单统计</figcaption>
+          </figure>
+          <figure class="evidence-card">
+            <button type="button" data-media="assets/senhai-hotel-program-transparent.png" data-caption="酒店预定小程序界面：预订、会员商城与酒店产品" aria-label="查看酒店预定小程序界面大图">
+              <img src="assets/senhai-hotel-program-transparent.png" alt="酒店预定小程序的预订、会员商城和酒店产品界面">
+            </button>
+            <figcaption>酒店预定小程序 · 预订、商城与酒店产品</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="brands" class="section brands-section" aria-labelledby="brands-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">05 / brand network</p>
+            <h2 id="brands-title">用品牌与品类，覆盖真实旅途需求。</h2>
+          </div>
+        </div>
+        <div class="brands-layout">
+          <div class="brands-copy">
+            <h3>从“缺一件东西”到“马上就能买到”。</h3>
+            <p>平台通过用户消费数据与酒店场景匹配需求，避开与主流电商平台的直接竞争，成为差旅与礼赠场景的垂直解决方案平台。</p>
+            <ul class="category-list" aria-label="覆盖品类">
+              <li>旅行收纳类</li>
+              <li>个人护理类</li>
+              <li>轻量日用类</li>
+              <li>形象应急类</li>
+              <li>健康应急类</li>
+              <li>出行体验类</li>
+              <li>商务礼赠类</li>
+              <li>地域文创类</li>
+            </ul>
+          </div>
+          <figure class="brands-figure">
+            <button type="button" data-media="assets/senhai-brands.jpg" data-caption="森海合作品牌与覆盖品类展示图" aria-label="查看合作品牌大图">
+              <img src="assets/senhai-brands.jpg" alt="森海合作品牌与品类展示图，包含个人护理、日用与健康应急品牌">
+            </button>
+            <figcaption>合作品牌与品类展示 · 点击查看大图</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="selection" class="section selection-section" aria-labelledby="selection-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">06 / product selection</p>
+            <h2 id="selection-title">按酒店定位，选择更合适的补给组合。</h2>
+          </div>
+        </div>
+        <div class="tab-list" role="tablist" aria-label="酒店选品档位">
+          <button class="tab" type="button" role="tab" aria-selected="true" data-tier="premium">高档型酒店选品</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tier="comfort">舒适型酒店选品</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tier="economy">经济型酒店选品</button>
+        </div>
+        <div class="selection-layout">
+          <div class="selection-copy">
+            <h3 id="tier-title">高档型酒店选品</h3>
+            <p id="tier-description">以品质感个人护理和旅途应急为主，适合强调体验与品牌感的酒店服务场景。</p>
+            <ul id="tier-tags" aria-label="当前选品重点">
+              <li>品牌护理与清洁</li>
+              <li>出行应急与个人防护</li>
+              <li>轻量日用与即时补给</li>
+            </ul>
+          </div>
+          <figure class="selection-board">
+            <button type="button" data-media="assets/senhai-premium.jpg" data-caption="高档型酒店选品图：理肤泉、欧莱雅、卫生用品、出行应急等场景组合" aria-label="查看高档型酒店选品大图">
+              <img id="tier-image" src="assets/senhai-premium.jpg" alt="高档型酒店选品示意图，展示个人护理、日用和出行应急商品">
+            </button>
+            <figcaption id="tier-caption">高档型酒店选品示意图 · 点击查看大图</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="section models-section" aria-labelledby="models-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">07 / cabinet & support</p>
+            <h2 id="models-title">多种机型适配丰富场景，机型与服务一起定制。</h2>
+          </div>
+        </div>
+        <div class="models-page" aria-label="森海自助柜机型展示">
+          <div class="models-catalog">
+            <div class="catalog-heading-row">
+              <div class="catalog-heading">
+                <p class="catalog-kicker">SENHAI 森海计划</p>
+                <h3>多种机型适配丰富场景</h3>
+                <p>根据酒店规模和实际需求应用标准款与定制款机型，精准高效满足多元场景。</p>
+              </div>
+              <div class="machine-carousel-actions" aria-label="机型展示翻页">
+                <button class="machine-carousel-control" type="button" data-machine-direction="-1" aria-label="查看上一组机型" disabled>←</button>
+                <button class="machine-carousel-control" type="button" data-machine-direction="1" aria-label="查看下一组机型">→</button>
+              </div>
+            </div>
+            <div id="machine-track" class="machine-grid" role="list" tabindex="0" aria-label="森海自助柜机型横向展示">
+              <button class="machine-card" type="button" role="listitem" data-media="assets/machine-classic.png" data-caption="通用经典款：覆盖常规酒店补给场景" aria-label="查看通用经典款大图">
+                <span class="machine-card-image"><img src="assets/machine-classic.png" alt="通用经典款森海酒店自助机"></span>
+                <strong>通用经典款</strong>
+                <small>常规酒店补给</small>
+              </button>
+              <button class="machine-card" type="button" role="listitem" data-media="assets/machine-pink.png" data-caption="通用亲子款：面向家庭与亲子出行" aria-label="查看通用亲子款大图">
+                <span class="machine-card-image"><img src="assets/machine-pink.png" alt="通用亲子款森海酒店自助机"></span>
+                <strong>通用亲子款</strong>
+                <small>家庭亲子出行</small>
+              </button>
+              <button class="machine-card" type="button" role="listitem" data-media="assets/machine-family.png" data-caption="文旅定制款：结合目的地视觉与服务" aria-label="查看文旅定制款大图">
+                <span class="machine-card-image"><img src="assets/machine-family.png" alt="文旅定制款森海酒店自助机"></span>
+                <strong>文旅定制款</strong>
+                <small>目的地主题视觉</small>
+              </button>
+              <button class="machine-card" type="button" role="listitem" data-media="assets/machine-classic.png" data-caption="通用经典款-联名：接入品牌与合作主题" aria-label="查看通用经典款联名大图">
+                <span class="machine-card-image"><img src="assets/machine-classic.png" alt="通用经典款联名森海酒店自助机"></span>
+                <strong>通用经典款-联名</strong>
+                <small>品牌合作主题</small>
+              </button>
+              <button class="machine-card" type="button" role="listitem" data-media="assets/machine-pink.png" data-caption="通用亲子款-联名：强化家庭客群体验" aria-label="查看通用亲子款联名大图">
+                <span class="machine-card-image"><img src="assets/machine-pink.png" alt="通用亲子款联名森海酒店自助机"></span>
+                <strong>通用亲子款-联名</strong>
+                <small>家庭客群体验</small>
+              </button>
+              <button class="machine-card" type="button" role="listitem" data-media="assets/machine-travel.png" data-caption="个性定制款：适配酒店专属形象与场景" aria-label="查看个性定制款大图">
+                <span class="machine-card-image"><img src="assets/machine-travel.png" alt="个性定制款森海酒店自助机"></span>
+                <strong>个性定制款</strong>
+                <small>酒店专属形象</small>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-layout">
+          <div>
+            <p class="eyebrow">Start a hotel partnership</p>
+            <h2 class="contact-slogan"><span>一次播种，长期主义</span><span>指数级增长酒店非房收入</span></h2>
+            <p>杭州森海计划智能科技有限公司，专注于酒店新零售场景开发、酒店商品供应链搭建及销售方案。</p>
+          </div>
+          <ul class="contact-list" aria-label="森海计划联系方式">
+            <li><strong>电话</strong><a href="tel:15757460353">157-5746-0353</a></li>
+            <li><strong>邮箱</strong><a href="mailto:1404549497@qq.com">1404549497@qq.com</a></li>
+            <li><strong>地址</strong><span>杭州市西湖区竞舟路 228 号文新数字产业园 611 室</span></li>
+          </ul>
+        </div>
+        <div class="footer-line">
+          <span>SENHAI 森海计划 · 酒店新零售自助机合作服务指南</span>
+          <span>内容依据所提供资料整理 · 资料版本 2606</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="presentation-shell" class="presentation-shell" hidden aria-label="森海合作服务指南演示模式">
+    <div id="deck-stage" class="deck-stage" aria-live="polite"></div>
+    <div class="deck-controls" aria-label="演示控制">
+      <button id="deck-exit" class="deck-control deck-exit" type="button" title="返回网页模式">网页</button>
+      <button id="deck-prev" class="deck-control deck-arrow" type="button" aria-label="上一页">←</button>
+      <div class="deck-progress-wrap" aria-hidden="true"><span id="deck-progress" class="deck-progress"></span></div>
+      <output id="deck-page" class="deck-page">01 / 01</output>
+      <button id="deck-next" class="deck-control deck-arrow" type="button" aria-label="下一页">→</button>
+    </div>
+  </div>
+
+  <dialog id="media-dialog" class="media-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-bar">
+      <h2 id="dialog-title" class="dialog-title">资料大图</h2>
+      <button class="dialog-close" type="button" aria-label="关闭大图">×</button>
+    </div>
+    <div class="dialog-content">
+      <img id="dialog-image" src="assets/senhai-premium.jpg" alt="高档型酒店选品示意图">
+      <p id="dialog-caption" class="dialog-caption"></p>
+    </div>
+  </dialog>
+
+  <script>
+    document.documentElement.classList.add('js-enabled');
+
+    const navToggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('#site-nav');
+    const navLinks = nav.querySelectorAll('a');
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', '打开导航');
+    }
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? '关闭导航' : '打开导航');
+    });
+
+    navLinks.forEach((link) => link.addEventListener('click', closeNav));
+
+    const machineCount = document.querySelector('#machine-count');
+    const machineCountOutput = document.querySelector('#machine-count-output');
+    const yieldSalesMonth = document.querySelector('#yield-sales-month');
+    const yieldSalesYear = document.querySelector('#yield-sales-year');
+    const yieldShareMonth = document.querySelector('#yield-share-month');
+    const yieldShareYear = document.querySelector('#yield-share-year');
+    const yieldSavingMonth = document.querySelector('#yield-saving-month');
+    const yieldSavingYear = document.querySelector('#yield-saving-year');
+    const yieldTotalAMonth = document.querySelector('#yield-total-a-month');
+    const yieldTotalAYear = document.querySelector('#yield-total-a-year');
+    const yieldTotalBMonth = document.querySelector('#yield-total-b-month');
+    const yieldTotalBYear = document.querySelector('#yield-total-b-year');
+    const yieldTotalCMonth = document.querySelector('#yield-total-c-month');
+    const yieldTotalCYear = document.querySelector('#yield-total-c-year');
+    const numberFormat = new Intl.NumberFormat('zh-CN');
+
+    function formatYuan(value) {
+      return `${numberFormat.format(value)} 元`;
+    }
+
+    function renderYieldModel() {
+      const count = Number(machineCount.value);
+      const salesMonth = count * 3000;
+      const shareMonth = count * 450;
+      const savingMonth = count * 840;
+      const totalAMonth = savingMonth;
+      const totalBMonth = shareMonth;
+      const totalCMonth = shareMonth;
+
+      machineCountOutput.textContent = `${numberFormat.format(count)} 台`;
+      yieldSalesMonth.textContent = `${formatYuan(salesMonth)} / 月`;
+      yieldSalesYear.textContent = `约 ${formatYuan(salesMonth * 12)} / 年`;
+      yieldShareMonth.textContent = `${formatYuan(shareMonth)} / 月`;
+      yieldShareYear.textContent = `约 ${formatYuan(shareMonth * 12)} / 年`;
+      yieldSavingMonth.textContent = `${formatYuan(savingMonth)} / 月`;
+      yieldSavingYear.textContent = `约 ${formatYuan(savingMonth * 12)} / 年`;
+      yieldTotalAMonth.textContent = `${formatYuan(totalAMonth)} / 月`;
+      yieldTotalAYear.textContent = `约 ${formatYuan(totalAMonth * 12)} / 年`;
+      yieldTotalBMonth.textContent = `${formatYuan(totalBMonth)} / 月`;
+      yieldTotalBYear.textContent = `约 ${formatYuan(totalBMonth * 12)} / 年`;
+      yieldTotalCMonth.textContent = `${formatYuan(totalCMonth)} / 月`;
+      yieldTotalCYear.textContent = `约 ${formatYuan(totalCMonth * 12)} / 年`;
+    }
+
+    machineCount.addEventListener('input', renderYieldModel);
+
+    const tierData = {
+      premium: {
+        title: '高档型酒店选品',
+        description: '以品质感个人护理和旅途应急为主，适合强调体验与品牌感的酒店服务场景。',
+        image: 'assets/senhai-premium.jpg',
+        alt: '高档型酒店选品示意图，展示个人护理、日用和出行应急商品',
+        caption: '高档型酒店选品示意图 · 点击查看大图',
+        dialogCaption: '高档型酒店选品图：理肤泉、欧莱雅、卫生用品、出行应急等场景组合',
+        tags: ['品牌护理与清洁', '出行应急与个人防护', '轻量日用与即时补给']
+      },
+      comfort: {
+        title: '舒适型酒店选品',
+        description: '在品质护理与高频补给之间取得平衡，适合商务、连锁与综合住宿场景。',
+        image: 'assets/senhai-comfort.jpg',
+        alt: '舒适型酒店选品示意图，展示护理用品、卫生用品和旅途应急商品',
+        caption: '舒适型酒店选品示意图 · 点击查看大图',
+        dialogCaption: '舒适型酒店选品图：珀莱雅、欧莱雅、卫生用品、指甲刀套装等场景组合',
+        tags: ['护理与卫生用品', '商务出行高频补给', '家庭与旅途应急']
+      },
+      economy: {
+        title: '经济型酒店选品',
+        description: '聚焦高频、轻量和刚需商品，用更清晰的商品组合覆盖预算敏感型住宿场景。',
+        image: 'assets/senhai-economy.jpg',
+        alt: '经济型酒店选品示意图，展示轻量护理、卫生用品和出行补给商品',
+        caption: '经济型酒店选品示意图 · 点击查看大图',
+        dialogCaption: '经济型酒店选品图：面膜、卸妆水、卫生用品、洗衣液等场景组合',
+        tags: ['高频刚需优先', '轻量日用与卫生', '出行与应急补给']
+      }
+    };
+
+    const tierTabs = [...document.querySelectorAll('[data-tier]')];
+    const tierTitle = document.querySelector('#tier-title');
+    const tierDescription = document.querySelector('#tier-description');
+    const tierImage = document.querySelector('#tier-image');
+    const tierCaption = document.querySelector('#tier-caption');
+    const tierTags = document.querySelector('#tier-tags');
+    const tierTrigger = document.querySelector('.selection-board button');
+
+    function renderTier(tierKey) {
+      const tier = tierData[tierKey];
+      if (!tier) return;
+      tierTabs.forEach((tab) => {
+        const selected = tab.dataset.tier === tierKey;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      tierTitle.textContent = tier.title;
+      tierDescription.textContent = tier.description;
+      tierImage.src = tier.image;
+      tierImage.alt = tier.alt;
+      tierCaption.textContent = tier.caption;
+      tierTrigger.dataset.media = tier.image;
+      tierTrigger.dataset.caption = tier.dialogCaption;
+      tierTrigger.setAttribute('aria-label', `查看${tier.title}大图`);
+      tierTags.replaceChildren(...tier.tags.map((tag) => {
+        const item = document.createElement('li');
+        item.textContent = tag;
+        return item;
+      }));
+    }
+
+    tierTabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => renderTier(tab.dataset.tier));
+      tab.addEventListener('keydown', (event) => {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        let nextIndex = index;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tierTabs.length;
+        if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tierTabs.length) % tierTabs.length;
+        if (event.key === 'Home') nextIndex = 0;
+        if (event.key === 'End') nextIndex = tierTabs.length - 1;
+        tierTabs[nextIndex].focus();
+        renderTier(tierTabs[nextIndex].dataset.tier);
+      });
+    });
+
+    const dialog = document.querySelector('#media-dialog');
+    const dialogImage = document.querySelector('#dialog-image');
+    const dialogTitle = document.querySelector('#dialog-title');
+    const dialogCaption = document.querySelector('#dialog-caption');
+    const dialogClose = document.querySelector('.dialog-close');
+    let lastTrigger = null;
+
+    function closeDialog() {
+      if (dialog.open && typeof dialog.close === 'function') dialog.close();
+      dialog.removeAttribute('open');
+      document.body.classList.remove('no-scroll');
+      if (lastTrigger) lastTrigger.focus();
+    }
+
+    function openDialog(trigger) {
+      lastTrigger = trigger;
+      dialogImage.src = trigger.dataset.media;
+      dialogImage.alt = trigger.querySelector('img')?.alt || trigger.dataset.caption || '资料大图';
+      dialogTitle.textContent = trigger.dataset.caption?.split('：')[0] || '资料大图';
+      dialogCaption.textContent = trigger.dataset.caption || '';
+      document.body.classList.add('no-scroll');
+      if (typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute('open', '');
+      }
+      dialogClose.focus();
+    }
+
+    document.querySelectorAll('[data-media]').forEach((trigger) => {
+      trigger.addEventListener('click', () => openDialog(trigger));
+    });
+
+    const siteGalleryTrack = document.querySelector('#site-gallery-track');
+    const siteGalleryControls = [...document.querySelectorAll('[data-gallery-direction]')];
+
+    function updateSiteGalleryControls() {
+      if (!siteGalleryTrack) return;
+      const maxScroll = siteGalleryTrack.scrollWidth - siteGalleryTrack.clientWidth;
+      const edgeTolerance = parseFloat(getComputedStyle(siteGalleryTrack).paddingLeft) + 2;
+      siteGalleryControls.forEach((control) => {
+        const direction = Number(control.dataset.galleryDirection);
+        control.disabled = direction < 0
+          ? siteGalleryTrack.scrollLeft <= edgeTolerance
+          : siteGalleryTrack.scrollLeft >= maxScroll - edgeTolerance;
+      });
+    }
+
+    siteGalleryControls.forEach((control) => {
+      control.addEventListener('click', () => {
+        siteGalleryTrack.scrollBy({
+          left: Number(control.dataset.galleryDirection) * siteGalleryTrack.clientWidth * 0.82,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    siteGalleryTrack?.addEventListener('scroll', updateSiteGalleryControls, { passive: true });
+
+    const machineTrack = document.querySelector('#machine-track');
+    const machineControls = [...document.querySelectorAll('[data-machine-direction]')];
+
+    function updateMachineControls() {
+      if (!machineTrack) return;
+      const maxScroll = machineTrack.scrollWidth - machineTrack.clientWidth;
+      const edgeTolerance = 3;
+      machineControls.forEach((control) => {
+        const direction = Number(control.dataset.machineDirection);
+        control.disabled = direction < 0
+          ? machineTrack.scrollLeft <= edgeTolerance
+          : machineTrack.scrollLeft >= maxScroll - edgeTolerance;
+      });
+    }
+
+    machineControls.forEach((control) => {
+      control.addEventListener('click', () => {
+        machineTrack.scrollBy({
+          left: Number(control.dataset.machineDirection) * machineTrack.clientWidth * 0.88,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    machineTrack?.addEventListener('wheel', (event) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      const maxScroll = machineTrack.scrollWidth - machineTrack.clientWidth;
+      const canMove = event.deltaY > 0
+        ? machineTrack.scrollLeft < maxScroll - 2
+        : machineTrack.scrollLeft > 2;
+      if (!canMove) return;
+      event.preventDefault();
+      machineTrack.scrollBy({ left: event.deltaY, behavior: 'auto' });
+    }, { passive: false });
+
+    machineTrack?.addEventListener('scroll', updateMachineControls, { passive: true });
+    window.addEventListener('resize', updateSiteGalleryControls);
+    window.addEventListener('resize', updateMachineControls);
+    dialogClose.addEventListener('click', closeDialog);
+    dialog.addEventListener('cancel', (event) => {
+      event.preventDefault();
+      closeDialog();
+    });
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) closeDialog();
+    });
+
+    const revealTargets = [...document.querySelectorAll('main > section:not(.hero) > .container')];
+    revealTargets.forEach((target) => target.classList.add('web-reveal'));
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+      revealTargets.forEach((target) => revealObserver.observe(target));
+    } else {
+      revealTargets.forEach((target) => target.classList.add('is-visible'));
+    }
+
+    const viewModeButtons = [...document.querySelectorAll('[data-view-mode]')];
+    const presentationShell = document.querySelector('#presentation-shell');
+    const deckStage = document.querySelector('#deck-stage');
+    const deckExit = document.querySelector('#deck-exit');
+    const deckPrev = document.querySelector('#deck-prev');
+    const deckNext = document.querySelector('#deck-next');
+    const deckPage = document.querySelector('#deck-page');
+    const deckProgress = document.querySelector('#deck-progress');
+    let deckSlides = [];
+    let deckIndex = 0;
+    let webScrollPosition = 0;
+    let wheelLocked = false;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    function setViewSwitchState(mode) {
+      viewModeButtons.forEach((button) => {
+        const isActive = button.dataset.viewMode === mode;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+    }
+
+    function makeDeckSlide(kind, label) {
+      const slide = document.createElement('section');
+      slide.className = `slide deck-slide--${kind}`;
+      slide.setAttribute('aria-label', label);
+      const frame = document.createElement('div');
+      frame.className = 'deck-frame';
+      const brandline = document.createElement('span');
+      brandline.className = 'deck-brandline';
+      brandline.textContent = `SENHAI 森海计划 · ${label}`;
+      frame.append(brandline);
+      slide.append(frame);
+      return { slide, frame };
+    }
+
+    function addPptSlide(kind, label, theme, content) {
+      const { slide, frame } = makeDeckSlide(kind, label);
+      const canvas = document.createElement('div');
+      canvas.className = `ppt-slide ${theme ? `ppt-slide--${theme}` : ''}`;
+      canvas.innerHTML = content;
+      frame.append(canvas);
+      deckStage.append(slide);
+      return slide;
+    }
+
+    function pptHead(kicker, title, note = '') {
+      return `
+        <header class="ppt-head">
+          <div><p class="ppt-kicker">${kicker}</p><h2 class="ppt-title">${title}</h2></div>
+          ${note ? `<p class="ppt-head-note">${note}</p>` : '<span></span>'}
+        </header>`;
+    }
+
+    function pptFooter(text) {
+      return `<span class="ppt-footer">${text}</span>`;
+    }
+
+    function bindPptYieldModel(slide) {
+      const input = slide?.querySelector('[data-ppt-yield-input]');
+      const output = slide?.querySelector('[data-ppt-yield-count]');
+      if (!input || !output) return;
+
+      const render = () => {
+        const count = Number(input.value);
+        const salesMonth = count * 3000;
+        const shareMonth = count * 450;
+        const savingMonth = count * 840;
+        output.textContent = `${numberFormat.format(count)} 台`;
+
+        const write = (selector, value, suffix = ' / 月') => {
+          const target = slide.querySelector(selector);
+          if (target) target.textContent = `${formatYuan(value)}${suffix}`;
+        };
+        const writeYear = (selector, value) => {
+          const target = slide.querySelector(selector);
+          if (target) target.textContent = `约 ${formatYuan(value * 12)} / 年`;
+        };
+
+        write('[data-ppt-sales-month]', salesMonth);
+        writeYear('[data-ppt-sales-year]', salesMonth);
+        write('[data-ppt-share-month]', shareMonth);
+        writeYear('[data-ppt-share-year]', shareMonth);
+        write('[data-ppt-saving-month]', savingMonth);
+        writeYear('[data-ppt-saving-year]', savingMonth);
+        write('[data-ppt-total-a]', savingMonth);
+        write('[data-ppt-total-b]', shareMonth);
+        write('[data-ppt-total-c]', shareMonth);
+      };
+
+      input.addEventListener('input', render);
+      render();
+    }
+
+    function buildDeck() {
+      deckStage.replaceChildren();
+
+      addPptSlide('cover', '合作服务指南', 'dark', `
+        <div class="ppt-cover">
+          <div class="ppt-cover-copy">
+            <img class="ppt-cover-logo" src="assets/senhai-logo-dark.png" alt="SENHAI 森海计划">
+            <h1>酒店新零售<span>自助机合作服务指南</span></h1>
+            <p>把旅途中的即时需求，转化为酒店可持续经营的服务入口。设备、系统、选品、快消供应链与运营支持，一套体系共同落地。</p>
+            <div class="ppt-cover-contact">
+              <div><small>电话</small><strong>157-5746-0353</strong></div>
+              <div><small>邮箱</small><strong>1404549497@qq.com</strong></div>
+              <div><small>地址</small><strong>杭州市西湖区竞舟路 228 号文新数字产业园 611 室</strong></div>
+            </div>
+          </div>
+          <div class="ppt-cover-visual">
+            <img class="ppt-cover-machine" src="assets/machine-classic.png" alt="森海酒店自助机">
+            <span class="ppt-cover-badge">Hotel new retail · 2026</span>
+          </div>
+        </div>`);
+
+      const partnerFigures = [...document.querySelectorAll('.hotel-partners-list:first-of-type img')]
+        .slice(0, 16)
+        .map((image) => `<figure><img src="${image.getAttribute('src')}" alt="${image.getAttribute('alt')}"></figure>`)
+        .join('');
+      addPptSlide('partners', '合作酒店与文旅伙伴', 'white', `
+        ${pptHead('Partner network', '已合作酒店与文旅品牌', '从酒店住宿场景出发，持续延展至文旅、乐园与本地消费场景。')}
+        <div class="ppt-body"><div class="ppt-partner-grid">${partnerFigures}</div></div>
+        ${pptFooter('Partnered brands')}`);
+
+      addPptSlide('ecosystem', '01 合作模式', 'soft', `
+        ${pptHead('01 / Partnership model', '选择森海自助柜体系，不止零售那么简单。', '一台设备是入口，背后连接住客服务、交易系统、快消供应链与后续增值能力。')}
+        <div class="ppt-body">
+          <div class="ppt-ecosystem">
+            <div class="ppt-ecosystem-side">
+              <div class="ppt-ecosystem-item"><b>01</b><strong>成熟线上线下后台系统</strong><span>购买、领取、库存、订单与远程状态统一管理。</span></div>
+              <div class="ppt-ecosystem-item"><b>02</b><strong>快消供应链帮你建</strong><span>围绕酒店客群配置应急、护理、卫生与轻量日用品。</span></div>
+              <div class="ppt-ecosystem-item"><b>03</b><strong>住客扫码购买或免费领取</strong><span>覆盖夜间、隐私与临时需求，降低前台服务压力。</span></div>
+              <div class="ppt-ecosystem-item"><b>04</b><strong>牙具领取与耗品降本模式</strong><span>免费牙具方案按真实使用量与合作约定落地。</span></div>
+            </div>
+            <div class="ppt-ecosystem-center">
+              <img src="assets/machine-classic.png" alt="森海酒店自助机">
+              <span class="ppt-ecosystem-label">酒店非房收入入口</span>
+            </div>
+            <div class="ppt-ecosystem-side">
+              <div class="ppt-ecosystem-item"><b>05</b><strong>建联本地服务与景区票务</strong><span>商城、景旅产品和本地服务可按接口逐步扩展。</span></div>
+              <div class="ppt-ecosystem-item"><b>06</b><strong>广告营销与转化</strong><span>品牌活动和广告合作按实际订单与真实数据验证。</span></div>
+              <div class="ppt-ecosystem-item"><b>07</b><strong>酒店非房收入增长入口</strong><span>柜机零售之外，形成可持续迭代的经营触点。</span></div>
+              <div class="ppt-ecosystem-item"><b>08</b><strong>已有小规模实投与真实订单</strong><span>以真实点位数据持续优化选品、服务与合作模型。</span></div>
+            </div>
+          </div>
+          <div class="ppt-ecosystem-strip"><span>销售、库存与酒店分润数据</span><span>商城 / 景旅接口可扩展</span><span>按月对账，持续经营复盘</span></div>
+        </div>
+        ${pptFooter('A system for sustainable hotel retail')}`);
+
+      addPptSlide('system', '01A 持续经营体系', 'dark', `
+        ${pptHead('01A / Operating system', '一台设备做入口，背后是一套持续经营体系。', '住客获得 24 小时补给，酒店获得可追踪、可对账、可持续优化的经营数据。')}
+        <div class="ppt-body">
+          <div class="ppt-pillars">
+            <article class="ppt-pillar"><b>01</b><h3>住客即时服务</h3><p>牙具、护理、应急和轻量日用补给，扫码购买或按方案免费领取。</p><small>夜间 · 隐私 · 临时需求</small></article>
+            <article class="ppt-pillar"><b>02</b><h3>系统与经营底座</h3><p>销售、库存、订单、远程状态与酒店分润数据统一沉淀。</p><small>可追踪 · 可对账 · 可复盘</small></article>
+            <article class="ppt-pillar"><b>03</b><h3>快消供应链</h3><p>按酒店客群组织选品、补货与渠道服务，持续优化商品结构。</p><small>选品 · 补货 · 运营</small></article>
+            <article class="ppt-pillar"><b>04</b><h3>增值能力延展</h3><p>商城、景旅、广告营销、酒店礼品体系和品牌合作按订单逐步扩展。</p><small>接口能力 · 不作固定收益承诺</small></article>
+          </div>
+          <div class="ppt-band-note"><strong>从一台设备开始，以真实订单验证。</strong><span>再按经营数据决定保留、优化或扩大。</span></div>
+        </div>
+        ${pptFooter('Service · System · Supply chain · Growth')}`);
+
+      addPptSlide('modes', '02 合作方案', 'white', `
+        ${pptHead('02 / Cooperation options', '三种合作方案，A 方案为优先推荐。', '先明确牙具成本与零售分润边界，再按酒店实际情况选择合作路径。')}
+        <div class="ppt-body">
+          <div class="ppt-mode-grid">
+            <article class="ppt-mode"><span class="ppt-mode-letter">B</span><h3>酒店自有牙具<br>＋零售分润</h3><p>酒店使用自有合规牙具，按整机销售额示例口径获得提成，牙具成本由酒店承担。</p><div class="ppt-mode-fit"><b>更适合</b><span>已有牙具供应，希望保留采购并分享销售收益的酒店。</span></div></article>
+            <article class="ppt-mode ppt-mode--recommended"><span class="ppt-recommended">最推荐</span><span class="ppt-mode-letter">A</span><h3>免费提供牙具</h3><p>森海提供约定牙具，酒店节省采购成本；该方式不参与自助柜零售分润。</p><div class="ppt-mode-fit"><b>更适合</b><span>重视耗材降本、住客基础服务与落地效率的酒店。</span></div></article>
+            <article class="ppt-mode"><span class="ppt-mode-letter">C</span><h3>森海采购牙具<br>＋零售分润</h3><p>森海提供牙具快消供应链服务，酒店按整机销售额示例口径获得提成。</p><div class="ppt-mode-fit"><b>更适合</b><span>原采购成本较高，或希望更换供应渠道的酒店；牙具降本不计入收益模型。</span></div></article>
+          </div>
+        </div>
+        ${pptFooter('Choose by hotel needs')}`);
+
+      const yieldSlide = addPptSlide('yield', '02A 收益模型', 'dark', `
+        ${pptHead('02A / Income model', '纯单体柜机零售收益测算模型', '商城、景旅、广告和品牌合作属于可扩展能力，不作为固定收益承诺。')}
+        <div class="ppt-body">
+          <div class="ppt-yield-control">
+            <label for="ppt-machine-count">拖动设备数量，查看 1—1,000 台规模变化</label>
+            <div class="ppt-yield-range-wrap"><input id="ppt-machine-count" data-ppt-yield-input type="range" min="1" max="1000" step="1" value="1"><div class="ppt-yield-ticks"><span>1</span><span>250</span><span>500</span><span>750</span><span>1,000</span></div></div>
+            <output data-ppt-yield-count for="ppt-machine-count">1 台</output>
+          </div>
+          <div class="ppt-yield-metrics">
+            <article class="ppt-yield-metric"><small>样板交易规模参考 · 柜机零售收益</small><strong data-ppt-sales-month>3,000 元 / 月</strong><span data-ppt-sales-year>约 36,000 元 / 年</span></article>
+            <article class="ppt-yield-metric"><small>B / C · 整机提成示例</small><strong data-ppt-share-month>450 元 / 月</strong><span data-ppt-share-year>约 5,400 元 / 年</span></article>
+            <article class="ppt-yield-metric"><small>A · 牙具采购降本示例</small><strong data-ppt-saving-month>840 元 / 月</strong><span data-ppt-saving-year>约 10,080 元 / 年</span></article>
+          </div>
+          <div class="ppt-yield-totals">
+            <div class="ppt-yield-total"><b>A</b><div><strong data-ppt-total-a>840 元 / 月</strong><span>仅牙具采购降本示例</span></div></div>
+            <div class="ppt-yield-total"><b>B</b><div><strong data-ppt-total-b>450 元 / 月</strong><span>整机零售提成示例</span></div></div>
+            <div class="ppt-yield-total"><b>C</b><div><strong data-ppt-total-c>450 元 / 月</strong><span>仅计整机零售提成，不计牙具降本</span></div></div>
+          </div>
+          <div class="ppt-yield-exclusion"><strong>模型明确不包含</strong><p>其他供应链成本优化、酒店零售礼品体系、景旅产品佣金、广告收益分成及品牌合作等增量。上述收益须按真实采购、订单、接口进度和合作合同另行测算。</p></div>
+        </div>
+        ${pptFooter('Illustrative model · Not a fixed return promise')}`);
+      bindPptYieldModel(yieldSlide);
+
+      addPptSlide('values', '03 合作价值', 'soft', `
+        ${pptHead('03 / Why Senhai', '四个直接价值，酒店和住客都更轻松。', '合作价值落在住客便利、前台减负、酒店收益与服务延展四个可感知结果上。')}
+        <div class="ppt-body"><div class="ppt-value-grid">
+          <article class="ppt-value"><b>01</b><div><h3>住客更方便</h3><p>牙具及应急用品可自助领取或购买，覆盖夜间、隐私和临时需求。</p></div></article>
+          <article class="ppt-value"><b>02</b><div><h3>前台更轻量</h3><p>扫码、支付、领取、库存和订单由系统承接，减少重复解释与人工售卖。</p></div></article>
+          <article class="ppt-value"><b>03</b><div><h3>酒店有收益</h3><p>可按合作模式获得零售分润，或通过免费牙具方案降低耗品采购支出。</p></div></article>
+          <article class="ppt-value"><b>04</b><div><h3>服务可延展</h3><p>后续可按真实订单接入商城、本地游、广告营销及品牌活动，形成住客触达入口。</p></div></article>
+        </div></div>
+        ${pptFooter('Convenience · Efficiency · Income · Extension')}`);
+
+      addPptSlide('responsibility', '03A 双方职责', 'white', `
+        ${pptHead('03A / Responsibilities', '责任清晰，点位才能持续经营。', '设备落地只是开始，稳定运营依赖双方按约定配合。')}
+        <div class="ppt-body"><div class="ppt-duty-grid">
+          <article class="ppt-duty"><h3>森海计划负责什么</h3><ul><li>组织设备配置、扫码购买/领取、销售与库存统计、远程状态及故障提醒。</li><li>根据酒店客群配置应急、隐私、卫生、洗护、亲子及电子配件等商品。</li><li>组织安装、补货、售后和运营优化，责任边界以合同及点位安排为准。</li><li>提供订单、销售、库存和酒店分润数据，按协议周期对账结算。</li></ul></article>
+          <article class="ppt-duty"><h3>酒店需要配合什么</h3><ul><li>提供大堂、电梯口或住客主要动线等适合摆放的位置。</li><li>确认房间数、房价、入住/人流、牙具用量及现有服务方式。</li><li>住客有需求时进行必要引导，并协助现场基础沟通。</li><li>按约定完成合同、进场、对账和经营复盘。</li></ul></article>
+        </div></div>
+        ${pptFooter('Clear ownership · Sustainable operation')}`);
+
+      addPptSlide('rollout', '04 点位推进', 'soft', `
+        ${pptHead('04 / Site & rollout', '先找到合适点位，再把服务跑起来。', '优先验证房量、房价、客群、动线和酒店配合度，再按数据决定保留、优化或扩展。')}
+        <div class="ppt-body"><div class="ppt-rollout">
+          <div class="ppt-profile-grid">
+            <article class="ppt-profile"><b>POINT 01</b><strong>房量与客流</strong><span>约 80—150 间房，入住与间夜相对稳定。</span></article>
+            <article class="ppt-profile"><b>POINT 02</b><strong>客群与房价</strong><span>商务、短途、亲子或旅游客群明显，房价约 200—400 元优先验证。</span></article>
+            <article class="ppt-profile"><b>POINT 03</b><strong>位置条件</strong><span>大堂、电梯口或住客必经动线可见，周边即时消费供给相对不足。</span></article>
+            <article class="ppt-profile"><b>POINT 04</b><strong>酒店配合</strong><span>愿意把牙具领取、应急用品指引与自助机结合，并提供经营数据。</span></article>
+          </div>
+          <div class="ppt-process">
+            <article class="ppt-step"><b>1</b><strong>点位初筛</strong><span>确认房量、房价、入住/人流、牙具用量和摆放位置。</span></article>
+            <article class="ppt-step"><b>2</b><strong>方案测算</strong><span>比较零售分润与免费牙具模式，明确观察指标。</span></article>
+            <article class="ppt-step"><b>3</b><strong>现场确认</strong><span>确认设备尺寸、电源、动线、进场和酒店配合。</span></article>
+            <article class="ppt-step"><b>4</b><strong>签约上线</strong><span>完成合同、选品、设备进场、调试和员工培训。</span></article>
+            <article class="ppt-step"><b>5</b><strong>经营复盘</strong><span>按月对账，连续观察三个月后优化或调整模式。</span></article>
+          </div>
+        </div></div>
+        ${pptFooter('From site screening to monthly review')}`);
+
+      addPptSlide('gallery', '04A 酒店点位实景', 'white', `
+        ${pptHead('04A / Real deployments', '真实酒店场景，比效果图更有说服力。', '设备可落于大堂、前台、亲子区域和住客主要动线，并与现有自助设备组合。')}
+        <div class="ppt-body"><div class="ppt-gallery">
+          <figure><img src="assets/site-scenes/hotel-lobby-cabinet.png" alt="酒店大堂旅行补给柜机"><figcaption>酒店大堂旅行补给柜机</figcaption></figure>
+          <figure><img src="assets/site-scenes/hotel-family-area.jpg" alt="亲子餐厅旁的旅行补给柜机"><figcaption>亲子餐厅旁点位</figcaption></figure>
+          <figure><img src="assets/site-scenes/hotel-lobby-machines.png" alt="酒店大堂自助设备组合"><figcaption>多设备服务组合</figcaption></figure>
+          <figure><img src="assets/site-scenes/hotel-public-area.png" alt="酒店公共区域旅行补给柜机"><figcaption>酒店公共区域点位</figcaption></figure>
+        </div></div>
+        ${pptFooter('Lobby · Front desk · Family area · Public space')}`);
+
+      addPptSlide('brands', '05 品牌品类', 'soft', `
+        ${pptHead('05 / Brand & category', '用品牌与品类，覆盖真实旅途需求。', '避开与主流电商的直接竞争，聚焦差旅、应急、礼赠与酒店即时补给。')}
+        <div class="ppt-body"><div class="ppt-brand-layout">
+          <figure class="ppt-brand-image"><img src="assets/senhai-brands.jpg" alt="森海合作品牌与品类"></figure>
+          <div class="ppt-category-grid"><span class="ppt-category">旅行收纳类</span><span class="ppt-category">个人护理类</span><span class="ppt-category">轻量日用类</span><span class="ppt-category">形象应急类</span><span class="ppt-category">健康应急类</span><span class="ppt-category">出行体验类</span><span class="ppt-category">商务礼赠类</span><span class="ppt-category">地域文创类</span></div>
+        </div></div>
+        ${pptFooter('Curated for travel moments')}`);
+
+      addPptSlide('selection', '06 选品方案', 'white', `
+        ${pptHead('06 / Product selection', '按酒店定位，选择更合适的补给组合。', '三档方案并列展示，现场讲解时无需切换按钮。')}
+        <div class="ppt-body"><div class="ppt-selection-grid">
+          <article class="ppt-selection"><img src="assets/senhai-premium.jpg" alt="高档型酒店选品"><div class="ppt-selection-copy"><b>PREMIUM</b><h3>高档型酒店选品</h3><p>品牌护理、出行应急与品质感日用，适合高端和精品酒店。</p></div></article>
+          <article class="ppt-selection"><img src="assets/senhai-comfort.jpg" alt="舒适型酒店选品"><div class="ppt-selection-copy"><b>COMFORT</b><h3>舒适型酒店选品</h3><p>个人护理、轻量日用与健康应急，平衡体验与转化。</p></div></article>
+          <article class="ppt-selection"><img src="assets/senhai-economy.jpg" alt="经济型酒店选品"><div class="ppt-selection-copy"><b>ECONOMY</b><h3>经济型酒店选品</h3><p>高频刚需、卫生洗护与即时补给，控制价格门槛。</p></div></article>
+        </div></div>
+        ${pptFooter('Premium · Comfort · Economy')}`);
+
+      addPptSlide('models', '07 机型与支持', 'soft', `
+        ${pptHead('07 / Cabinet models', '多种机型适配丰富场景，主题视觉可定制。', '标准款、亲子款、文旅款与联名定制款统一横向呈现，不设置无效翻页按钮。')}
+        <div class="ppt-body"><div class="ppt-machine-grid">
+          <article class="ppt-machine"><img src="assets/machine-classic.png" alt="通用经典款"><div><strong>通用经典款</strong><small>常规酒店补给</small></div></article>
+          <article class="ppt-machine"><img src="assets/machine-pink.png" alt="通用亲子款"><div><strong>通用亲子款</strong><small>家庭亲子出行</small></div></article>
+          <article class="ppt-machine"><img src="assets/machine-family.png" alt="文旅定制款"><div><strong>文旅定制款</strong><small>目的地主题视觉</small></div></article>
+          <article class="ppt-machine"><img src="assets/machine-classic.png" alt="通用经典款联名"><div><strong>经典款 · 联名</strong><small>品牌合作主题</small></div></article>
+          <article class="ppt-machine"><img src="assets/machine-pink.png" alt="通用亲子款联名"><div><strong>亲子款 · 联名</strong><small>家庭客群体验</small></div></article>
+          <article class="ppt-machine"><img src="assets/machine-travel.png" alt="个性定制款"><div><strong>个性定制款</strong><small>酒店专属形象</small></div></article>
+        </div></div>
+        ${pptFooter('Standard · Family · Travel · Co-branding')}`);
+
+      addPptSlide('digital', '08 数字化能力', 'dark', `
+        ${pptHead('08 / Digital ecosystem', '住客端、柜机端与酒店端，形成完整服务链路。', '从扫码领取和购买，到订单、库存、酒店产品与会员服务，数据持续沉淀。')}
+        <div class="ppt-body"><div class="ppt-digital-grid">
+          <article class="ppt-digital"><img src="assets/senhai-mini-program-transparent.png" alt="森海小程序界面"><div class="ppt-digital-copy"><h3>住客端与酒店管理中心</h3><p>商品、订单、领取与酒店服务入口。</p></div></article>
+          <article class="ppt-digital"><img src="assets/senhai-cabinet-system-transparent.png" alt="自助机系统界面"><div class="ppt-digital-copy"><h3>柜机领取、购买与统计</h3><p>免费领取、商品购买、库存与订单数据。</p></div></article>
+          <article class="ppt-digital"><img src="assets/senhai-hotel-program-transparent.png" alt="酒店预定小程序界面"><div class="ppt-digital-copy"><h3>预订、商城与酒店产品</h3><p>会员商城、酒店礼品及服务延展入口。</p></div></article>
+        </div></div>
+        ${pptFooter('Guest · Cabinet · Hotel')}`);
+
+      addPptSlide('contact', '联系合作', 'warm', `
+        <div class="ppt-contact">
+          <div class="ppt-contact-copy">
+            <p class="ppt-kicker">Start a hotel partnership</p>
+            <h1><span>一次播种，长期主义</span><span>指数级增长酒店非房收入</span></h1>
+            <p>杭州森海计划智能科技有限公司，专注于酒店新零售场景开发、酒店商品快消供应链搭建及销售方案。</p>
+            <ul class="ppt-contact-list"><li><b>电话</b><span>157-5746-0353</span></li><li><b>邮箱</b><span>1404549497@qq.com</span></li><li><b>地址</b><span>杭州市西湖区竞舟路 228 号文新数字产业园 611 室</span></li></ul>
+          </div>
+          <div class="ppt-contact-visual"><img src="assets/machine-pink.png" alt="森海计划酒店自助机"></div>
+        </div>`);
+
+      deckSlides = [...deckStage.querySelectorAll('.slide')];
+      deckSlides.forEach((slide, index) => {
+        slide.dataset.slideIndex = String(index);
+        const brandline = slide.querySelector('.deck-brandline');
+        if (brandline) brandline.textContent = `${String(index + 1).padStart(2, '0')} / ${String(deckSlides.length).padStart(2, '0')} · ${brandline.textContent}`;
+      });
+    }
+
+    function fitDeckContent() {
+      // Every presentation slide is authored directly at 1920 x 1080.
+    }
+
+    function scaleDeckStage() {
+      const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      deckStage.style.setProperty('--deck-scale', String(scale));
+    }
+
+    function showDeckSlide(index) {
+      if (!deckSlides.length) return;
+      deckIndex = Math.max(0, Math.min(index, deckSlides.length - 1));
+      deckSlides.forEach((slide, slideIndex) => slide.classList.toggle('active', slideIndex === deckIndex));
+      const current = deckIndex + 1;
+      deckPage.value = `${String(current).padStart(2, '0')} / ${String(deckSlides.length).padStart(2, '0')}`;
+      deckProgress.style.transform = `scaleX(${current / deckSlides.length})`;
+      deckPrev.disabled = deckIndex === 0;
+      deckNext.disabled = deckIndex === deckSlides.length - 1;
+    }
+
+    function enterPresentation() {
+      closeNav();
+      webScrollPosition = window.scrollY;
+      buildDeck();
+      presentationShell.hidden = false;
+      document.body.classList.add('no-scroll');
+      document.body.dataset.viewMode = 'presentation';
+      setViewSwitchState('presentation');
+      requestAnimationFrame(() => {
+        scaleDeckStage();
+        fitDeckContent();
+        showDeckSlide(0);
+        deckNext.focus();
+      });
+    }
+
+    function exitPresentation() {
+      presentationShell.hidden = true;
+      document.body.classList.remove('no-scroll');
+      document.body.dataset.viewMode = 'web';
+      setViewSwitchState('web');
+      window.scrollTo({ top: webScrollPosition, behavior: 'auto' });
+      document.querySelector('[data-view-mode="presentation"]')?.focus();
+    }
+
+    viewModeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (button.dataset.viewMode === 'presentation') enterPresentation();
+        else if (!presentationShell.hidden) exitPresentation();
+      });
+    });
+    deckExit.addEventListener('click', exitPresentation);
+    deckPrev.addEventListener('click', () => showDeckSlide(deckIndex - 1));
+    deckNext.addEventListener('click', () => showDeckSlide(deckIndex + 1));
+
+    window.addEventListener('keydown', (event) => {
+      if (presentationShell.hidden) return;
+      const rangeKeys = ['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Home', 'End', 'PageUp', 'PageDown', ' '];
+      if (event.target.matches('input[type="range"]') && rangeKeys.includes(event.key)) return;
+      if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(event.key)) {
+        event.preventDefault();
+        showDeckSlide(deckIndex + 1);
+      } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(event.key)) {
+        event.preventDefault();
+        showDeckSlide(deckIndex - 1);
+      } else if (event.key === 'Home') {
+        event.preventDefault();
+        showDeckSlide(0);
+      } else if (event.key === 'End') {
+        event.preventDefault();
+        showDeckSlide(deckSlides.length - 1);
+      } else if (event.key === 'Escape') {
+        event.preventDefault();
+        exitPresentation();
+      }
+    });
+
+    presentationShell.addEventListener('wheel', (event) => {
+      if (event.target.closest('.yield-control, .ppt-yield-control')) return;
+      event.preventDefault();
+      if (wheelLocked || Math.abs(event.deltaY) < 18) return;
+      wheelLocked = true;
+      showDeckSlide(deckIndex + (event.deltaY > 0 ? 1 : -1));
+      window.setTimeout(() => { wheelLocked = false; }, 520);
+    }, { passive: false });
+
+    presentationShell.addEventListener('touchstart', (event) => {
+      if (event.target.closest('.ppt-yield-control')) return;
+      touchStartX = event.changedTouches[0].clientX;
+      touchStartY = event.changedTouches[0].clientY;
+    }, { passive: true });
+    presentationShell.addEventListener('touchend', (event) => {
+      if (event.target.closest('.ppt-yield-control')) return;
+      const deltaX = event.changedTouches[0].clientX - touchStartX;
+      const deltaY = event.changedTouches[0].clientY - touchStartY;
+      if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) < 48) return;
+      const direction = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX < 0 : deltaY < 0;
+      showDeckSlide(deckIndex + (direction ? 1 : -1));
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      if (!presentationShell.hidden) scaleDeckStage();
+    });
+
+    renderYieldModel();
+    renderTier('premium');
+    requestAnimationFrame(updateSiteGalleryControls);
+    requestAnimationFrame(updateMachineControls);
+  </script>
+</body>
+</html>
