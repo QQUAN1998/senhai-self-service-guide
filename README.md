@@ -1,3 +1,27 @@
+# 酒店自助机，合作流程一页看懂
+
+[English](README.en.md) · [在线图示](https://qquan1998.github.io/senhai-self-service-guide/docs/demo.html) · [反馈问题](https://github.com/QQUAN1998/senhai-self-service-guide/issues)
+
+![15 秒功能演示](docs/images/demo.gif)
+
+> 适合酒店运营、商务合作与点位部署沟通。 本地打开 http://localhost:8080。页面测算是场景假设，不是收益承诺；网页正文为中文。
+
+<a id="quick-start"></a>
+
+## 三步开始
+
+1. 直接打开在线完整指南，无需安装或登录。
+2. 按服务体系、合作方案、点位部署的顺序浏览。
+3. 需要本地修改时，克隆仓库，在仓库根目录执行下方命令。
+
+```text
+python -m http.server 8080
+```
+
+[中英文推广文案](docs/LAUNCH.md) · [本次文档更新](docs/UPDATES.md) · [版本记录方法](docs/RELEASING.md)
+
+---
+
 # 森海 · 酒店自助机合作服务指南
 
 [English](README.en.md) · [页面源码](index.html)

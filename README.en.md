@@ -1,3 +1,27 @@
+# A visual guide to hotel self-service retail
+
+[简体中文](README.md) · [Visual tour](https://qquan1998.github.io/senhai-self-service-guide/docs/demo.html) · [Report an issue](https://github.com/QQUAN1998/senhai-self-service-guide/issues)
+
+![15-second visual tour](docs/images/demo.gif)
+
+> For hotel operations, cooperation discussions and deployment planning. Open http://localhost:8080 locally. Financial examples are scenario assumptions, not return promises. The full guide is in Chinese.
+
+<a id="quick-start"></a>
+
+## Quick start
+
+1. Open the complete online guide without installation or sign-in.
+2. Browse the service system, cooperation models and deployment sections.
+3. To edit locally, clone the repository and run the command below from its root.
+
+```text
+python -m http.server 8080
+```
+
+[Bilingual launch copy](docs/LAUNCH.md) · [Documentation changes](docs/UPDATES.md) · [Release checklist](docs/RELEASING.md)
+
+---
+
 # Senhai · Hotel Self-Service Partnership Guide
 
 [简体中文](README.md) · [View the guide source](index.html)
